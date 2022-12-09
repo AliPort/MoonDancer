@@ -1,16 +1,25 @@
-//config
-require('dotenv').config
+// Modules and Globals
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
+const path = require('path')
 const methodOverride = require('method-override')
 const app = express()
 
-//express settings
+// Express Settings
+app.use(cors())
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
-app.use(express.static('public'))
-app.use(express.urlencoded({ extended: true })) 
+
+// serve static frontend in production mode
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, 'public', 'build')));
+}
 app.use(methodOverride('_method'))
 app.use(bodyParser.json())
 
