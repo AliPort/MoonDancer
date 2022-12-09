@@ -41,12 +41,12 @@ function Navigation() {
                 </li>
                 <li>
                     <a href="#" onClick={() => history.push("/places")}>
-                        Places
+                        Gallery
                     </a>
                 </li>
                 <li>
                     <a href="#" onClick={() => history.push("/places/new")}>
-                        Add Place
+                        About
                     </a>
                 </li>
                 {loginActions}

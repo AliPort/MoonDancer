@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 
-function PlaceIndex(data) {
+function GalleryIndex(data) {
 
 	const history = useHistory()
 	
@@ -44,4 +44,4 @@ function PlaceIndex(data) {
 	)
 }
 
-export default PlaceIndex;
+export default Gallery;
