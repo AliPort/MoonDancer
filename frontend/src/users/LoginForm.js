@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import { useHistory } from "react-router"
 import { CurrentUser } from "../contexts/CurrentUser"
-import { auth }
+import { useAuth0 } from "@auth0/auth0-react"
 
 function LoginForm() {
 

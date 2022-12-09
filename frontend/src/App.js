@@ -1,14 +1,13 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './Home'
-import Gallery from './gallery'
-import PlaceDetails from './places/PlaceDetails'
+import Gallery from './gallery/GalleryIndex'
+import Booking from './Booking'
 import Navigation from './Navigation'
 import Error404 from './Error404'
-import NewPlaceForm from './places/NewPlaceForm'
-import EditPlaceForm from './places/EditPlaceForm'
 import SignUpForm from './users/SignUpForm'
 import LoginForm from './users/LoginForm'
 import CurrentUserProvider from './contexts/CurrentUser'
+import About from './About'
 
 function App() {
   return (
@@ -19,10 +18,9 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/sign-up" component={SignUpForm} />
             <Route exact path="/login" component={LoginForm} />
-            <Route exact path="/gallery" component={GalleryIndex} />
-            <Route exact path="/places/new" component={NewPlaceForm} />
-            <Route exact path="/places/:placeId" component={PlaceDetails} />
-            <Route exact path="/places/:placeId/edit" component={EditPlaceForm} />
+            <Route exact path="/gallery" component={Gallery} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/booking" component={Booking} />
             <Route path="/" component={Error404} />
           </Switch>
         </BrowserRouter>
