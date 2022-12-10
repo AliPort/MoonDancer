@@ -70,7 +70,7 @@ const NavBar = () => {
                   exact
                   activeClassName="router-link-exact-active"
                 >
-                  Gallery
+                  Charters
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -80,7 +80,7 @@ const NavBar = () => {
                   exact
                   activeClassName="router-link-exact-active"
                 >
-                  BOOK A TOUR
+                  Fish Index
                 </NavLink>
               </NavItem>
               {isAuthenticated && (
