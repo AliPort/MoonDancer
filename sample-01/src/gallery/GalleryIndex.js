@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useHistory } from "react-router";
+// import { useEffect, useState } from "react";
+// import { useHistory } from "react-router";
 
 function Gallery() {
 	return (
