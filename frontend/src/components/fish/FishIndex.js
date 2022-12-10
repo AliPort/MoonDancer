@@ -1,12 +1,12 @@
 // import { useEffect, useState } from "react";
 // import { useHistory } from "react-router";
 
-function Gallery() {
+function Fish() {
 	return (
 		<main>
-			<h1>GALLERY</h1>
+			<h1>FISH</h1>
 		</main>
 	);
 }
 
-export default Gallery;
+export default Fish;
