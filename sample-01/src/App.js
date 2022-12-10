@@ -51,27 +51,6 @@ function App() {
         <Footer />
       </div>
     </Router>
-
-  // return (
-  //   <Router history={history}>
-  //     <div id="app" className="d-flex flex-column h-100">
-  //       <NavBar />
-  //       <Container className="flex-grow-1 mt-5">
-  //           <Switch>
-  //             <Route exact path="/" component={Home} />
-  //             {/* <Route exact path="/sign-up" component={SignUpForm} />
-  //             <Route exact path="/login" component={LoginForm} /> */}
-  //             <Route exact path="/gallery" component={Gallery} />
-  //             <Route exact path="/about" component={About} />
-  //             <Route exact path="/booking" component={Booking} />
-  //             <Route path="/" component={Error404} />
-  //             <Route path="/profile" component={Profile} />
-  //             <Route path="/external-api" component={ExternalApi} />
-  //           </Switch>
-  //         </Container>
-  //         <Footer />
-  //     </div>
-  //   </Router>
   );
 }
 
