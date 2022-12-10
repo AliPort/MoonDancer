@@ -10,7 +10,7 @@ import Profile from "./views/Profile";
 import ExternalApi from "./views/ExternalApi";
 import { useAuth0 } from "@auth0/auth0-react";
 import history from "./utils/history";
-import Gallery from './components/gallery/GalleryIndex'
+import Fish from './components/fish/FishIndex'
 import Booking from './views/Booking'
 import Error404 from './views/Error404'
 import About from './views/About'
@@ -41,7 +41,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/profile" component={Profile} />
-            <Route exact path="/gallery" component={Gallery} />
+            <Route exact path="/fish" component={Fish} />
             <Route exact path="/about" component={About} />
             <Route exact path="/booking" component={Booking} />
             <Route path="/" component={Error404} />
