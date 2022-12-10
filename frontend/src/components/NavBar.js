@@ -53,6 +53,36 @@ const NavBar = () => {
                   Home
                 </NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink
+                  tag={RouterNavLink}
+                  to="/about"
+                  exact
+                  activeClassName="router-link-exact-active"
+                >
+                  About
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  tag={RouterNavLink}
+                  to="/gallery"
+                  exact
+                  activeClassName="router-link-exact-active"
+                >
+                  Gallery
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  tag={RouterNavLink}
+                  to="/booking"
+                  exact
+                  activeClassName="router-link-exact-active"
+                >
+                  BOOK A TOUR
+                </NavLink>
+              </NavItem>
               {isAuthenticated && (
                 <NavItem>
                   <NavLink
