@@ -10,10 +10,10 @@ import Profile from "./views/Profile";
 import ExternalApi from "./views/ExternalApi";
 import { useAuth0 } from "@auth0/auth0-react";
 import history from "./utils/history";
-import Gallery from './gallery/GalleryIndex'
-import Booking from './Booking'
-import Error404 from './Error404'
-import About from './About'
+import Gallery from './components/gallery/GalleryIndex'
+import Booking from './views/Booking'
+import Error404 from './views/Error404'
+import About from './views/About'
 //import CurrentUserProvider from './contexts/CurrentUser'
 
 // styles
