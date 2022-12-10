@@ -66,21 +66,21 @@ const NavBar = () => {
               <NavItem>
                 <NavLink
                   tag={RouterNavLink}
-                  to="/gallery"
+                  to="/booking"
                   exact
                   activeClassName="router-link-exact-active"
                 >
-                  Gallery
+                  Charters
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
                   tag={RouterNavLink}
-                  to="/booking"
+                  to="/fish"
                   exact
                   activeClassName="router-link-exact-active"
                 >
-                  BOOK A TOUR
+                  Fish Index
                 </NavLink>
               </NavItem>
               {isAuthenticated && (
