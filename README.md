@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MoonDancer Charters, LLC 
 
 ## Inspiration for the website
@@ -24,3 +25,8 @@ Stripe (payment processing)
 
 
 ## Outstanding functionality and/or issues 
+=======
+MoonDancer Boat Tours!
+
+This app is for booking a boat tour in the Panacea, FL area
+>>>>>>> fd3612b734645db3393e2c073f1126033606a371
