@@ -33,3 +33,20 @@
 .result-block-container .result-block {
   opacity: 1;
 }
+
+img {
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+body {
+  background-image: url("./assets/beached.JPG")
+  /*background-repeat: repeat-y*/
+}
+
+
+
+
+
