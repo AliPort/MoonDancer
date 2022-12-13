@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-  
-
-
-
- {
-=======
 {
->>>>>>> 75391be76d927a6f6d9401d3cb7374db0d7506a7
+  
+ {
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
