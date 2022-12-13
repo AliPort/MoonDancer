@@ -15,8 +15,6 @@ class Booking extends React.Component {
 	<main>
 		<h1>BOOK YOU TOUR</h1>
 		{/* THIS DOESNT WORK YET SORRY GUYS */}
-		<script>
-		</script>
 		<button class="collapsible">
 			1/2 Day - Morning
 			<h2>PLACEHOLDER FOR AN IMAGE</h2>
