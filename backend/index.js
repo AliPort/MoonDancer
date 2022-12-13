@@ -65,7 +65,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(express.urlencoded({ extended: true }));
 
-// app.use('/api/places', require('./controllers/places'))
+// app.use('/api/tours', require('./controllers/tours'))
 // app.use('/api/users', require('./controllers/users'))
 
 // Listen for Connections
