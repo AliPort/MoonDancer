@@ -19,7 +19,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     tourName: DataTypes.STRING,
     date: DataTypes.DATE,
-    timeOfDay: DataTypes.TIME
+    timeOfDay: {
+      type: DataTypes.STRING,
+      values: ['Morning', 'Afternoon', 'All Day']
+    }
     }, 
     {
     sequelize,
