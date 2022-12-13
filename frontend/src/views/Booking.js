@@ -1,9 +1,12 @@
+import { Elements } from "@stripe/react-stripe-js";
+import InjectedCheckoutForm from '../components/stripe/CheckoutForm';
+
 function Booking() {
 	return (
-	  <main>
-		<h1>BOOK A TOUR</h1>
-	  </main>
-	);
+		<Elements>
+		 	<InjectedCheckoutForm />
+		</Elements>
+	 );
   }
   
   export default Booking
