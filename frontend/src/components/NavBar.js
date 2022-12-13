@@ -90,6 +90,8 @@ const NavBar = () => {
                     to="/external-api"
                     exact
                     activeClassName="router-link-exact-active"
+
+                    
                   >
                     External API
                   </NavLink>
