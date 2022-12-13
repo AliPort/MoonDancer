@@ -70,7 +70,7 @@ const NavBar = () => {
                   exact
                   activeClassName="router-link-exact-active"
                 >
-                  Charters
+                  Charters & Tours
                 </NavLink>
               </NavItem>
               <NavItem>
