@@ -1,4 +1,0 @@
-PORT=300
-DB_USERNAME=rest_rant_user
-DB_PASSWORD=password
-DB_DATABASE=rest_rant
