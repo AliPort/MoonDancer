@@ -93,6 +93,12 @@ h1{
   opacity: 1;
 }
 
+body {
+  background-image: url("./assets/beached.JPG")
+  /*background-repeat: repeat-y*/
+}
+
+
 /* stripe */
 #root {
   display: flex;
@@ -229,3 +235,4 @@ button:disabled {
     min-width: initial;
   }
 }
+

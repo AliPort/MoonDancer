@@ -2,10 +2,13 @@ function About() {
 	return (
 	  <main>
 		<h1>ABOUT</h1>
-		<h3>PLACEHOLDER FOR IMAGE</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi morbi tempus iaculis urna id volutpat lacus. Porta nibh venenatis cras sed. Faucibus purus in massa tempor nec feugiat nisl pretium. Porttitor massa id neque aliquam. Pulvinar elementum integer enim neque volutpat. Aenean euismod elementum nisi quis eleifend. Quis enim lobortis scelerisque fermentum dui. Orci a scelerisque purus semper. Laoreet non curabitur gravida arcu ac tortor dignissim convallis. Arcu felis bibendum ut tristique.</p>
-		<a class="book_trip" href="/booking">BOOK YOUR TOUR TODAY</a>
-		<h3>PLACE HOLDER FOR ASK THE CAPTAIN COMPONENT</h3>
+
+		<h2>25 Years of Boating Experience</h2>
+		<h2>Captain Will Smith</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorongue eu consequat ac felis donec. Egestas egestas fringilla phasellus faucibus scelerisque. Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Et magnis dis parturient montes nascetur ridiculus mus mauris. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Turpis nunc eget lorem dolor. Arcu non sodales Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorongue eu consequat ac felis donec. Egestas egestas fringilla phasellus faucibus scelerisque. Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Et magnis dis parturient montes nascetur ridiculus mus mauris. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Turpis nunc eget lorem dolor. Arcu non sodales 
+
+		</p>
+
 	  </main>
 	);
   }

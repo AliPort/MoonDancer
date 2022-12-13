@@ -1,4 +1,7 @@
 import React from "react";
+import moondancerlogo from '../assets/MoonDancerlogo.jpg';
+
+
 import github from "../assets/github.png"
 
 const Footer = () => (
@@ -8,6 +11,30 @@ const Footer = () => (
       <a class="site_map" href="/about">ABOUT</a><br/>
       <a class="site_map" href="/booking">CHARTERS & TOURS</a><br/>
       <a class="site_map" href="/fish">FISH INDEX</a><br/>
+    <img src={moondancerlogo}  alt="company logo" />; 
+    <h1>MoonDancer Boat Charters</h1>
+    <h1>Ask the Captain</h1>
+   
+  
+  <form>
+   <label>
+    First Name:
+    <input type="text" name="name" />
+   </label>
+   <label> 
+    Last Name:
+    <input type="text" address="address" />
+   </label>
+   <label>
+    Email*:
+    <input type="email" email="email" />
+  </label>
+  <label>
+    Subject:
+    <input type="text" subject="subject" />
+  </label>
+  <input type="submit" value="Submit" />
+</form>
     <p>
       © 2022 MoonDancer Boat Charters Designed by <a href="https://github.com/AliPort">Alita Portillo</a>, 
       <a href="https://github.com/EPtackArts"> Elizabeth Ptack</a>, 
@@ -17,5 +44,10 @@ const Footer = () => (
     </p>
   </footer>
 );
+
+
+
+<link to={{ pathname: "https://www.visitflorida.com/listing/wakulla-diving-center/29406"}} target="_blank" />
+
 
 export default Footer;

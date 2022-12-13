@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import beached from '../assets/beached.JPG';
+import Footer from '../components/Footer.js';
 
 const Home = () => {
  
