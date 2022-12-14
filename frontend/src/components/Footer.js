@@ -1,22 +1,19 @@
 import React from "react";
 import moondancerlogo from '../assets/MoonDancerlogo.jpg';
-
-
 import github from "../assets/github.png"
 
 const Footer = () => (
   <footer className="bg-light p-3 text-center">
     <h6>SITEMAP</h6>
-      <a class="site_map" href="/">HOME</a><br/>
-      <a class="site_map" href="/about">ABOUT</a><br/>
-      <a class="site_map" href="/booking">CHARTERS & TOURS</a><br/>
-      <a class="site_map" href="/fish">FISH INDEX</a><br/>
+      <a className="site_map" href="/">HOME</a><br/>
+      <a className="site_map" href="/about">ABOUT</a><br/>
+      <a className="site_map" href="/booking">CHARTERS & TOURS</a><br/>
+      <a className="site_map" href="/fish">FISH INDEX</a><br/>
     <img src={moondancerlogo}  alt="company logo" />; 
     <h1>MoonDancer Boat Charters</h1>
-    <h1>Ask the Captain</h1>
-   
   
   <form>
+  <h2>Ask the Captain</h2>
    <label>
     First Name:
     <input type="text" name="name" />

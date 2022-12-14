@@ -1,5 +1,5 @@
 // Modules and Globals
-//require("dotenv").config();
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -7,6 +7,8 @@ const path = require("path");
 const app = express();
 const { auth } = require("express-openid-connect");
 const { Sequelize } = require("sequelize");
+
+
 
 const config = {
   authRequired: false,

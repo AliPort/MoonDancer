@@ -9,6 +9,11 @@ h1{
   color: rgb(66, 66, 165)
 }
 
+h2 {
+  font-family: arkhip, Copperplate, Papyrus, fantasy, sans-serif;
+  color: rgb(207, 207, 252)
+}
+
 .banner_photo {
   max-width: 100%;
   margin-top: 0;
@@ -53,6 +58,11 @@ h1{
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
+}
+
+.selection {
+  width: 33.33%;
+  display: inline-block;
 }
 
 /* API STYLING BELOW */
