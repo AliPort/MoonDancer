@@ -20,21 +20,21 @@ const config = {
 };
 
 // // SEQUELIZE CONNECTION
-// const sequelize = new Sequelize(process.env.PG_URI)
+const sequelize = new Sequelize(process.env.PG_URI)
 
-// try {
-//     sequelize.authenticate() 
-//     console.log(`Connected with Sequelize at ${process.env.PG_URI}`) 
-// } catch(err) {
-//     console.log(`Unable to connect to PG: ${err}`) 
-// }
+try {
+    sequelize.authenticate() 
+    console.log(`Connected with Sequelize at ${process.env.PG_URI}`) 
+} catch(err) {
+    console.log(`Unable to connect to PG: ${err}`) 
+}
 
-const sequelize = new Sequelize('MoonDancer', 'postgres', '', {
-  dialect: 'postgres',
-  dialectOptions: {
-    // Your pg options here
-  }
-});
+// const sequelize = new Sequelize('MoonDancer', 'postgres', '', {
+//   dialect: 'postgres',
+//   dialectOptions: {
+//     // Your pg options here
+//   }
+// });
 
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
