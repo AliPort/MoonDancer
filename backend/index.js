@@ -8,6 +8,8 @@ const app = express();
 const { auth } = require("express-openid-connect");
 const { Sequelize } = require("sequelize");
 
+
+
 const config = {
   authRequired: false,
   auth0Logout: true,
