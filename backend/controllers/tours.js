@@ -1,17 +1,26 @@
+const router = require('express').Router()
+const db = require("../models/tour")
 
-// const router = require('express').Router()
-// const db = require("../models/user.js")
+const { Tour } = db
 
-// const { Tour } = db
-
-// router.post('/', async (req, res) => {
-//     const user = await User.create(req.body)
-//     res.json(user)
-// })
-
-// router.get('/', async (req, res) => {
-//     const users = await User.findAll()
-//     res.json(users)
-// })
-
-// module.exports = router
+class TourController {
+    createTour(req, res) {
+      // Create a new instance of the Tour model with the date from the request body
+      const tour = Tour.build({ date: req.body.date });
+  
+      // Save the tour to the database
+      tour.save()
+        .then(() => res.sendStatus(200))
+        .catch(error => res.status(400).send(error));
+    }
+  }
+  
+  // Create a new instance of the TourController
+  const controller = new TourController();
+  
+  // Create a new Tour model instance
+  router.post('/', (req, res) => {
+    controller.createTour(req, res);
+  });
+  
+  module.exports = router;
