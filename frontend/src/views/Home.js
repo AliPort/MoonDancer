@@ -6,6 +6,7 @@ const Home = () => {
  
   return (
     <Fragment>
+      
       <h1>HOME</h1>
       <div>
         <h2>MoonDancer Boat Charters</h2>

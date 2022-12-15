@@ -3,17 +3,18 @@ import { Container } from "reactstrap";
 import { Route, Router, Switch } from 'react-router-dom'
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import CheckoutForm from "./components/stripe/CheckoutForm"
 import Loading from "./components/Loading";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
+import Fish from "./views/Fish";
 import Profile from "./views/Profile";
 import ExternalApi from "./views/ExternalApi";
 import { useAuth0 } from "@auth0/auth0-react";
 import history from "./utils/history";
-import Fish from './components/fish/FishIndex'
 import Booking from './views/Booking'
 import Error404 from './views/Error404'
 import About from './views/About'

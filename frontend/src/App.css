@@ -39,8 +39,15 @@
   display: flex;
   align-items: center;
 }
+#image {
+  height: 200px;
+  width: 200px;
+  background-size: 200px 200px;
+}
+
 
 body {
+  background-image: url("./assets/beached.JPG");
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
