@@ -178,3 +178,7 @@ button:disabled {
   }
 }
 
+h1,h2,h3,h4,ul,p {
+  font-weight: bold;
+  color: white;
+}

@@ -11,7 +11,11 @@ const Fish = () => {
         <div class="container">
         <div class="row">
         <div class="col">
-          <img src="../assets/Rock Sea Bass.jpg"/>
+          <div class="fish1box">
+            <div class = "imgForBox">
+            <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
+          </div>
+         </div> 
           <h2>Rock Sea Bass</h2>
           <h3>Appearance</h3>
           <p>
@@ -22,15 +26,20 @@ const Fish = () => {
           Head and fins with bright blue and orange markings
           Adults have tail with three lobes and elongated dorsal filaments
           Top of head -  nape - is fully-scaled
-          Similar Species: Bank sea bass, C. ocyurus - black spot near middle of dorsal fin base and nape lacks scales. 
-          Size: Rarely more than 10 inches in length 
-          </p>
+          Similar Species: Bank sea bass, C. ocyurus - black spot near middle of dorsal fin base and nape lacks scales.</p> 
+          <h3>Size</h3>
+          <p> Rarely more than 10 inches in length</p>
           <h3>Habitat</h3>
           <p>Coastal waters over hard bottom areas; also found near sand or mud bottoms</p>
           <h3>Behavior</h3>
           <p>Spawn January through March. Young adults are predominantly female and transform into males as they grow older.  The maximum size for rock sea bass is about 10 inches.</p>
         </div>
         <div class="col">
+          <div class="fish1box">
+            <div class = "imgForBox">
+              <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
+          </div>
+         </div> 
          <h2>Gulf Flounder</h2>
          <h3>Appearance</h3> 
          <ul>
@@ -39,6 +48,10 @@ const Fish = () => {
           Strong canine-like teeth
           Wedge-shaped tail, its tip in the middle
          </ul>
+         <h3>Similar Species</h3>
+           <p>Southern flounder, P. lethostigma (may have 5 or more spots but they are not eyelike); summer flounder, P. dentatus (have 5 or more ocellated or eyelike spots on the body)</p>
+         <h3>Size</h3>
+         <p>Common to 14 inches</p>
          <h3>Habitat</h3>
          <p>Inshore on sandy or mud bottoms, often ranging into tidal creeks. Occasionally caught on nearshore rocky reefs.</p>
          <h3>Behavior</h3>
@@ -50,14 +63,23 @@ const Fish = () => {
              </ul>
         </div>
     <div class="col">
+      <div class="fish1box">
+         <div class = "imgForBox">
+            <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
+          </div>
+         </div> 
       <h2> Spanish Mackeral</h2>
-      <h3>Appearance</h3>
-      <ul>
+       <h3>Appearance</h3>
+        <ul>
           Back is bluish-green, fading to silvery sides and belly
           Irregular golden-yellow spots on sides
           Bluish-black blotch on front of first dorsal fin
           Lateral line slopes gently from behind the gill cover to the tail
-      </ul>
+        </ul>
+      <h3>Similar Species</h3>
+        <p>Cero, S. regalis - has yellowish stripe on sides; and king mackerel, S. cavalla - lateral line drops sharply below second dorsal fin</p>
+    <h3>Size</h3>
+     <p>Up to 36 inches</p>
       <h3>Habitat</h3>
       <p>Prevalent throughout Florida waters: inshore, offshore and nearshore. Frequently found over grass beds and reefs. Absent from north Florida waters in winter.</p>
       <h3>Behavior</h3>
@@ -65,8 +87,12 @@ const Fish = () => {
         Feeds on small fishes and invertebrates.</p>
     </div>
     <div class="col">
-      <h2>Cobia      </h2>
-            
+    <div class="fish1box">
+      <div class = "imgForBox">
+        <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
+      </div>
+      </div> 
+      <h2>Cobia</h2>
       <h3>Appearance</h3>
       <ul>   
        Long, slim fish with a broad, depressed head
@@ -74,27 +100,46 @@ const Fish = () => {
        Dark lateral stripe extending through eye to tail
        Lower jaw projects past upper jaw
        Young have alternating black and white horizontal stripes
-      </ul>
+      </ul> 
+      <h3>Similar Species</h3>
+        <p>Remora, E. naucrates - sucker disk present on top of head</p>
+      <h3>Size</h3>
+        <p>Up to 6 feet - 150 pounds; common from 10 to 50 pounds</p>
       <h3>Habitat</h3>
-      <p>Cobia are found in nearshore and inshore waters with inlets and bays. Cobia are frequently found around buoys, pilings and wrecks in these areas.</p>
+        <p>Cobia are found in nearshore and inshore waters with inlets and bays. Cobia are frequently found around buoys, pilings and wrecks in these areas.</p>
       <h3>Behavior</h3>
-      <p>They spawn in spring and early summer. Feeds on crabs, squid and small fishes.</p>
+        <p>They spawn in spring and early summer. Feeds on crabs, squid and small fishes.</p>
     </div>
     <div class="col">
-      <h2>Kingfish</h2>
+    <div class= "fish1box">
+        <div class = "imgForBox">
+            <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
+        </div>
+    </div> 
+      <h2>Gulf Kingfish</h2>
       <h3>Appearance</h3>
-      <ul>Body is silvery all over, without dark marks
-          First dorsal fin tip is often dusky-brown
-          Caudal fin - tail - has a blackish tip
-          Scales on underside are smaller than body scales
-          Barbel on lower jaw
-      </ul>
+        <p>Also known as whiting</p>
+        <ul>Body is silvery all over, without dark marks
+            First dorsal fin tip is often dusky-brown
+            Caudal fin - tail - has a blackish tip
+            Scales on underside are smaller than body scales
+            Barbel on lower jaw
+        </ul>
+      <h4>Similar Species</h4>
+        <p>Southern kingfish, M. americanus (caudal fin lacks a blackish tip); and northern kingfish, M. saxatilis (disting "V" mark above pectoral fins) </p>
+        <h5>Size</h5>
+         <p>Up to 18 inches</p>
       <h3>Habitat</h3>
       <p>Coastal waters; common in surf zones along beaches.</p>
       <h3>Behavior</h3>
       <p>Thought to prefer high wave action areas such as sand bars where the crashing waves dislodge and suspend small crabs and other small crustaceans. Feeds on fishes and invertabrates.      </p>
     </div>
     <div class="col">
+     <div class="fish1box">
+       <div class = "imgForBox">
+            <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
+        </div>
+      </div> 
       <h2>Redfish</h2>
       <h3>Appearance</h3>
       <ul>
@@ -104,18 +149,21 @@ const Fish = () => {
         Large scales
         Powerful pharyngeal teeth used to crush oysters and other shellfish
       </ul>
+      <h3>Habitat</h3>
+      <p>Coastal waters. In winter, redfish are found in seagrass, over muddy or sand bottoms, or near oyster bars or spring fed creeks.</p>
+      <h3>Behavior</h3>
+      <p>Juvenile redfish are an inshore species until they reach roughly 30 inches - around 4 years. They then migrate to the nearshore population.</p>
+      <p>Prodigious spawners that produce tens of millions of eggs. Spawning season is from about August through December, in passes, inlets and lagoon estuaries around the state. During spawning season, redfish use special muscles rubbing against their air bladder to produce a "drumming" sound for which they are named.</p>
+      <p>Feed on fishes and invertebrates.</p>
     </div>
   </div>
-
-  </div>
-
-        
+ </div>
+       
     </Fragment>
 
 
-  )
-  
-  
+     )
+   
   };
 
 export default Fish;
