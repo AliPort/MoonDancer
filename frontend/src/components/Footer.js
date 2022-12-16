@@ -1,12 +1,12 @@
 import React from "react";
-import moondancerlogo from '../assets/MoonDancerlogo.jpg';
+//import logo.svg from '../assets/logo.svg';
 
 
 
 const Footer = () => (
   <footer className="bg-light p-3 text-center">
     <div className="logo" />
-    <img src={moondancerlogo}  alt="company logo" />; 
+    
     <h1>MoonDancer Boat Charters</h1>
     <h1>Ask the Captain</h1>
    
