@@ -178,25 +178,3 @@ button:disabled {
   }
 }
 
-p {
-  text-align: left;
-  color: blue;
-  font-weight:bold
-}
-
-h1,h2,h3,ul,p {
-  text-align: left;
-  color: black;
-  font-weight:bold
-}
-
-
-  Image- {
-    width: 250px;
-    height: 100px;
-    background-color: green;
-    object-fit: none;
-    object-position: left;
-
-  }
-
