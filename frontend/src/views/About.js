@@ -9,7 +9,8 @@ function About() {
 		 <h1>ABOUT</h1>
            <Row>
              <Col><img id="captn"
-		        src={ require('../assets/Captain in a wet suit.JPG') } /></Col>
+		        src={ require('../assets/Captain in a wet suit.JPG')} />
+			 </Col>
 
              <Col><h2>25 Years of Boating Experience</h2>
 		          <h2>Captain Will Smith</h2>

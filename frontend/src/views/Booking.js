@@ -11,65 +11,49 @@ class Booking extends React.Component {
 	};
   
 	render() {
-	  return (
+	  return ( 
 		<main>
-		  <h1>BOOK A TOUR</h1>
+			<div class="bookie">
+			 <h1>Book a Tour!</h1>
+			</div>
+			
+ 		<div class="topTour">
+		  <p>Come and explore a range of exciting fishing with Outlaw Sport Fishing. Based out of Marathon, FL you’ll have access to several kinds of fishing. Flats, reefs, and the deeper waters are just on your doorstep. The fishing is hot year-round, and Captain Brad Picariello carried with him a lifetime’s experience on the waters. Running charters since the age of 16, he’s also a prominent tournament angler, and is always looking for the next prized catch.</p>
+          <p>Head out to sea aboard a 40’ D&A Custom Sport fisherman. A versatile vessel, she’s suited to all kinds of fishing. While 4 people can fish at once, there’s plenty of space for 2 more to relax and enjoy the tropical scenery. Bring your own drinks and snacks to put in the captain’s cooler – just also bring an ice box for your catch. Powered by twin 480 HP Cummins engines, and with the onboard fishfinder and GPS, you’ll hit the sweet spots right away.</p>
+		</div>
 		  <div class="container">
         <div class="row">
         <div class="col">
           <div class="fish1box">
             <div class = "imgForBox">
-            <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
+            <img src="../assets/Spacious comfortable seating with sink on deck.JPG" width="175px"/>
           </div>
          </div> 
+		  <h3>Half Day</h3>
           <h2>Open Ocean Fishing</h2>
-          <h3>Half Day</h3>
+            <p>Fish for Swordfish, a prized catch in the Florida Keys! Trips are weather permitting.Also have a chance to catch Mahi Mahi & Blackfin Tuna</p>
+            <p>Catch the fish of a lifetime!</p>
+		    <p>up to 4 Anglers</p>
+			<h2>AM/PM 4 Hour Trip</h2>
+			<h3>8am - 12pm / 1pm - 5pm</h3>
 		  <h4>$625</h4>
-          <p>
-          Olive-bronze on back, fading to a lighter belly
-          Black blotches form vertical bars on sides
-          Dark black spot near middle of dorsal fin base
-          Tip of lower jaw is purple
-          Head and fins with bright blue and orange markings
-          Adults have tail with three lobes and elongated dorsal filaments
-          Top of head -  nape - is fully-scaled
-          Similar Species: Bank sea bass, C. ocyurus - black spot near middle of dorsal fin base and nape lacks scales.</p> 
-          <h3>More</h3>
-          <p> Rarely more than 10 inches in length</p>
-          <h3>Habitat</h3>
-          <p>Coastal waters over hard bottom areas; also found near sand or mud bottoms</p>
-          <h3>Behavior</h3>
-          <p>Spawn January through March. Young adults are predominantly female and transform into males as they grow older.  The maximum size for rock sea bass is about 10 inches.</p>
+		  <button onclick="bookhalfOpenOcean()">Book Now</button>
         </div>
         <div class="col">
-          <div class="fish1box">
+          <div class="fish2box">
             <div class = "imgForBox">
-              <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
+              <img src="../assets/spectacular views.JPG" width="275px"/>
           </div>
          </div> 
-         <h2>Open Ocean Fishing</h2>
          <h3>Full Day</h3>
-		 <h4>$700</h4> 
-
-         <ul>
-          Bottom-oriented flatfish with both eyes on the left side
-          Numerous spots and blotches on body with three prominent dark, eyelike spots forming a triangle-shape (one spot on lateral line, one above and one below)
-          Strong canine-like teeth
-          Wedge-shaped tail, its tip in the middle
-         </ul>
-         <h3>Similar Species</h3>
-           <p>Southern flounder, P. lethostigma (may have 5 or more spots but they are not eyelike); summer flounder, P. dentatus (have 5 or more ocellated or eyelike spots on the body)</p>
-         <h3>Size</h3>
-         <p>Common to 14 inches</p>
-         <h3>Habitat</h3>
-         <p>Inshore on sandy or mud bottoms, often ranging into tidal creeks. Occasionally caught on nearshore rocky reefs.</p>
-         <h3>Behavior</h3>
-            <ul>
-             Right eye migrates over to left side early in life.
-             A bottom-dweller thought to spawn offshore.
-             Feeds on crustaceans and small fishes.
-             Ability to camouflage by changing colors to match their surrounding habitat and avoid predators.
-             </ul>
+		 <h2>Open Ocean Fishing</h2>
+		   <p>Fish for Swordfish, a prized catch in the Florida Keys! Trips are weather permitting. Also have a chance to catch Mahi Mahi & Blackfin Tuna</p>
+           <p>Catch the fish of a lifetime!</p>
+           <p>up to 4 Anglers</p>
+		   <h2>AM 10 Hour Trip</h2>
+		   <h3>8am - 6pm</h3>
+  		   <h4>$700</h4>
+		   <button onclick="bookfullOpenOcean()">Book Now</button> 
         </div>
     <div class="col">
       <div class="fish1box">
@@ -77,6 +61,7 @@ class Booking extends React.Component {
             <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
           </div>
          </div> 
+		 
       <h2> Bay Fishing</h2>
        <h3>Half Day</h3>
 	   <h4>$400</h4>

@@ -1,11 +1,11 @@
 import React from "react";
-//import logo.svg from '../assets/logo.svg';
-
+import FullLogo from '../assets/FullLogo.jpg';
 
 
 const Footer = () => (
   <footer className="bg-light p-3 text-center">
-    <div className="logo" />
+    <div className="logo"
+     />
     
     <h1>MoonDancer Boat Charters</h1>
     <h1>Ask the Captain</h1>
