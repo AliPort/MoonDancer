@@ -7,7 +7,6 @@ const Fish = () => {
   return (
     <Fragment>
         <h1>FISH INDEX</h1>
-
         <div class="container">
         <div class="row">
         <div class="col">
@@ -94,12 +93,13 @@ const Fish = () => {
       </div> 
       <h2>Cobia</h2>
       <h3>Appearance</h3>
+      <p>Also known as ling or lemonfish.</p>
       <ul>   
-       Long, slim fish with a broad, depressed head
-       Brown in color, fading to a whitish belly
-       Dark lateral stripe extending through eye to tail
-       Lower jaw projects past upper jaw
-       Young have alternating black and white horizontal stripes
+        Long, slim fish with a broad, depressed head
+        Brown in color, fading to a whitish belly
+        Dark lateral stripe extending through eye to tail
+        Lower jaw projects past upper jaw
+        Young have alternating black and white horizontal stripes
       </ul> 
       <h3>Similar Species</h3>
         <p>Remora, E. naucrates - sucker disk present on top of head</p>
@@ -127,7 +127,7 @@ const Fish = () => {
         </ul>
       <h4>Similar Species</h4>
         <p>Southern kingfish, M. americanus (caudal fin lacks a blackish tip); and northern kingfish, M. saxatilis (disting "V" mark above pectoral fins) </p>
-        <h5>Size</h5>
+        <h3>Size</h3>
          <p>Up to 18 inches</p>
       <h3>Habitat</h3>
       <p>Coastal waters; common in surf zones along beaches.</p>
@@ -142,6 +142,7 @@ const Fish = () => {
       </div> 
       <h2>Redfish</h2>
       <h3>Appearance</h3>
+       <p>Also known as Red Drum</p>
       <ul>
         Body is copper-bronze, fading to a lighter belly
         One or more dark, ocellated spots at base of tail (occasionally without spot)
@@ -149,12 +150,16 @@ const Fish = () => {
         Large scales
         Powerful pharyngeal teeth used to crush oysters and other shellfish
       </ul>
+      <h3>Similar Species</h3>
+        <p>Black drum, P. cromis - has chin barbels and lacks spot on tail</p>
+      <h3>Size</h3>
+         <p>Up to 18 inches</p>
       <h3>Habitat</h3>
-      <p>Coastal waters. In winter, redfish are found in seagrass, over muddy or sand bottoms, or near oyster bars or spring fed creeks.</p>
+        <p>Coastal waters. In winter, redfish are found in seagrass, over muddy or sand bottoms, or near oyster bars or spring fed creeks.</p>
       <h3>Behavior</h3>
-      <p>Juvenile redfish are an inshore species until they reach roughly 30 inches - around 4 years. They then migrate to the nearshore population.</p>
-      <p>Prodigious spawners that produce tens of millions of eggs. Spawning season is from about August through December, in passes, inlets and lagoon estuaries around the state. During spawning season, redfish use special muscles rubbing against their air bladder to produce a "drumming" sound for which they are named.</p>
-      <p>Feed on fishes and invertebrates.</p>
+        <p>Juvenile redfish are an inshore species until they reach roughly 30 inches - around 4 years. They then migrate to the nearshore population.</p>
+        <p>Prodigious spawners that produce tens of millions of eggs. Spawning season is from about August through December, in passes, inlets and lagoon estuaries around the state. During spawning season, redfish use special muscles rubbing against their air bladder to produce a "drumming" sound for which they are named.</p>
+        <p>Feed on fishes and invertebrates.</p>
     </div>
   </div>
  </div>
