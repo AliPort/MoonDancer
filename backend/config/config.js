@@ -17,9 +17,9 @@ module.exports = {
   },
   "production": {
     "username": "postgres",
-    "password": "Digger32!",
-    "database": "MoonDancer_production",
-    "host": "127.0.0.1",
+    "password": "FljUYpULIr7bea1gSD2w",
+    "database": "railway",
+    "host": "containers-us-west-139.railway.app",
     "dialect": "postgres"
   }
 }
