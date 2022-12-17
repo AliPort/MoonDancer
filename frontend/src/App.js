@@ -1,4 +1,14 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { Container } from "reactstrap";
+import { Route, Router, Switch } from 'react-router-dom'
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import CheckoutForm from "./components/stripe/CheckoutForm"
+import Loading from "./components/Loading";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import Home from "./views/Home";
 import Booking from './views/Booking.js'
 import PlaceIndex from './places/PlaceIndex'
