@@ -24,15 +24,15 @@ const initOptions = {
 const pgp = require('pg-promise')(initOptions);
 
 // // Parse the connection string into an object
-// const cnObj = new ConnectionString(process.env.DATABASE_URL);
+const cnObj = new ConnectionString(process.env.DATABASE_URL);
 
 // DB Connection String
 const cn = {
-  host: 'localhost',
-  port: 5433,
-  database: 'flush',
-  user: 'Eldoza',
-  password: '',
+  host: 'railway.app',
+  port: 7121,
+  database: 'railway',
+  user: 'postgres',
+  password: 'FljUYpULIr7bea1gSD2w',
   // TODO: This is likely very unsecure and should be fixed
   // ssl: {
   //   rejectUnauthorized: false,

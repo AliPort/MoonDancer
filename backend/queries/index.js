@@ -1,8 +1,8 @@
 const { db } = require("../dbConnection");
 
 
-exports.queryToFetchAllProducts = () => {
+exports.queryToFetchAllTours = () => {
     return db.manyOrNone(
-        `SELECT * FROM products `
+        `SELECT * FROM tours `
     )
 }
