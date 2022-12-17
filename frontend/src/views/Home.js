@@ -1,12 +1,11 @@
 import React, { Fragment } from "react";
-import beached from '../assets/beached.JPG';
 
 const Home = () => {
  
   return (
     <Fragment>
       <h1>MoonDancer Boat Charters</h1>
-      <img className="banner_photo" src={beached} alt="boat next to shoreline" />
+      <img className="banner_photo" src="../assets/FullLogo.jpg" alt="Moondancer: Where memories are made!" />
       <a className="book_trip" href="/booking">BOOK YOUR TOUR TODAY</a>
       {/* I was thinking that the title and the button could be 
       laid out on top of the photo - similar to the Florida Sport Fishing site */}
