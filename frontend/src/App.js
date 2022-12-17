@@ -3,7 +3,7 @@ import Home from "./views/Home";
 import Booking from './views/Booking.js'
 import PlaceIndex from './places/PlaceIndex'
 import PlaceDetails from './places/PlaceDetails'
-import Navigation from './Navigation'
+// import Navigation from './Navigation'
 import Error404 from './Error404'
 import NewPlaceForm from './places/NewPlaceForm'
 import EditPlaceForm from './places/EditPlaceForm'
