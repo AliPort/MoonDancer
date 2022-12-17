@@ -9,7 +9,7 @@ const Footer = () => (
       <a className="site_map" href="/about">ABOUT</a><br/>
       <a className="site_map" href="/booking">CHARTERS & TOURS</a><br/>
       <a className="site_map" href="/fish">FISH INDEX</a><br/>
-    <img src={moondancerlogo}  alt="company logo" />; 
+    <img src={FullLogo}  alt="company logo" />; 
     <h1>MoonDancer Boat Charters</h1>
   
   <form>

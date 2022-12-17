@@ -1,6 +1,4 @@
 import React, { Fragment } from "react";
-//import image from "../assets/scuba diving.jpg"
-import Footer from '../components/Footer.js';
 
 const Fish = () => {
  
