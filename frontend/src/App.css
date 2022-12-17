@@ -103,19 +103,20 @@ h2 {
   opacity: 1;
 }
 
-body {
-  background-image: url("./assets/beached.JPG")
-  /*background-repeat: repeat-y*/
-}
-
-
 /* stripe */
 #root {
   display: flex;
   align-items: center;
 }
+#image {
+  height: 200px;
+  width: 200px;
+  background-size: 200px 200px;
+}
+
 
 body {
+  background-image: url("./assets/beached_2.jpg");
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -246,3 +247,25 @@ button:disabled {
   }
 }
 
+h1,h2,h3,h4,ul,p {
+  font-weight: bold;
+  color: white;
+}
+.topTour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: -moz-linear-gradient();
+  height: 200px;
+}
+.duckRow {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  background-image:"../Keep your Ducks in a row.jpg";
+}
+.bookie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

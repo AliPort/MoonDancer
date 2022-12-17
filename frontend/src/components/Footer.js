@@ -1,5 +1,5 @@
 import React from "react";
-import moondancerlogo from '../assets/MoonDancerlogo.jpg';
+import FullLogo from '../assets/FullLogo.jpg';
 import github from "../assets/github.png"
 
 const Footer = () => (
