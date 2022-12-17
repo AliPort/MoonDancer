@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Icon from '../assets/moondancericon.png';
 
 import {
   Collapse,
@@ -47,10 +48,10 @@ const NavBar = () => {
                   to="/"
                   exact
                   activeClassName="router-link-exact-active">
-                  Home
+                  <img src={Icon} alt="moondancer icon" width="80px"/>
                 </NavLink>
               </NavItem>
-              <NavItem>
+              <NavItem className="item">
                 <NavLink
                   tag={RouterNavLink}
                   to="/about"
@@ -59,7 +60,7 @@ const NavBar = () => {
                   About
                 </NavLink>
               </NavItem>
-              <NavItem>
+              <NavItem className="item">
                 <NavLink
                   tag={RouterNavLink}
                   to="/booking"
@@ -68,7 +69,7 @@ const NavBar = () => {
                   Charters & Tours
                 </NavLink>
               </NavItem>
-              <NavItem>
+              <NavItem className="item">
                 <NavLink
                   tag={RouterNavLink}
                   to="/fish"

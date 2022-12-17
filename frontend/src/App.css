@@ -3,20 +3,77 @@
   font-family: arkhip;
   src: url(./assets/arkhip_font.woff);
 }
-
+.nav-container {
+  font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+.item {
+  padding-top: 1em;
+}
+.masthead {
+  height: 100vh;
+  min-height: 900px;
+  background-color: rgb(10,26,76);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.img_fluid {
+  max-width: 100%;
+  height: auto;
+}
+.btn-block {
+  margin-top: -9em;
+  background-color: rgb(249,232,164);
+  position: relative;
+  height: 5em;
+}
+.booking {
+  text-decoration: none;
+  margin: 0;
+  padding-top: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+footer {
+  background-color: white;
+}
+#AskDiv {
+  border: 2px solid #ccc;
+  padding: 0;
+  width: 18em;
+}
+#Ask {
+  background-color: rgb(249,232,164);
+  padding: 1em;
+  border-radius: 5px;
+  float: left;
+  width: 100%;
+  margin-top: 6px;
+}
+#AskForm {
+  box-shadow: none;
+  padding: 0;
+}
 h1{
-  font-family: arkhip, Copperplate, Papyrus, fantasy, sans-serif;
-  color: rgb(66, 66, 165);
+  font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
+  color: rgb(10,26,76);
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
-  font-family: arkhip, Copperplate, Papyrus, fantasy, sans-serif;
+  font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
   color: rgb(207, 207, 252);
 }
 
-.banner_photo {
-  max-width: 100%;
-  margin-top: 0;
+h3 {
+  font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
+  color: rgb(21,103,255);
 }
 
 #github_logo{
@@ -72,12 +129,14 @@ h2 {
   height: 200px;
   margin-bottom: 50px;
 }
+
 .duckRow {
   display: flex;
   align-items: center;
   height: 200px;
   background-image:"../Keep your Ducks in a row.jpg";
 }
+
 .bookie {
   display: flex;
   justify-content: center;

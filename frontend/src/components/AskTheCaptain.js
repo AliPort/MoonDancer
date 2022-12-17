@@ -1,25 +1,16 @@
 function AskTheCaptain() {
     return (
-    <form>
-        <h2>Ask the Captain</h2>
-        <label>
-            First Name:
-            <input type="text" name="name" />
-        </label>
-        <label> 
-            Last Name:
-            <input type="text" address="address" />
-        </label>
-        <label>
-            Email*:
-            <input type="email" email="email" />
-        </label>
-        <label>
-            Subject:
-            <input type="text" subject="subject" />
-        </label>
-        <input type="submit" value="Submit" />
-    </form>
+    <div id="Ask">
+        <form id="AskForm">
+            <h3>Ask the Captain</h3>
+            <input className="AskInput" type="text" name="fname" placeholder="First Name" required/><br/>
+            <input className="AskInput" type="text" name="lname" placeholder="Last Name" required/><br/>
+            <input className="AskInput" type="email" name="email" placeholder="E-Mail" required/><br/>
+            <input className="AskInput" type="text" name="subject" placeholder="Subject" required/><br/>
+            <input className="AskInput" type="text" name="message" placeholder="Your Message" required/><br/>
+            <input className="AskInput" type="submit" value="Submit" />
+        </form>
+    </div>
 )};
 
 export default AskTheCaptain;

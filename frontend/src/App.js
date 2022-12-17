@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "reactstrap";
 import { Route, Router, Switch } from 'react-router-dom'
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
@@ -76,7 +75,6 @@ function App() {
       )}
     </div>
         <NavBar />
-        <Container className="flex-grow-1 mt-5">
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/profile" component={Profile} />
@@ -87,9 +85,8 @@ function App() {
             <Route path="/" component={Error404} />
             <Route path="/external-api" component={ExternalApi} />
           </Switch>
-        </Container>
         <Footer />
-      </div>
+    </div>
     </Router>
   );
 }
