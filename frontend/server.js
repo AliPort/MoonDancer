@@ -1,6 +1,6 @@
 const express = require("express");
-const morgan = require("morgan");
-const helmet = require("helmet");
+// const morgan = require("morgan");
+// const helmet = require("helmet");
 const { join } = require("path");
 // This is a public sample test API key.
 // Don’t submit any personally identifiable information in requests made with this key.
@@ -11,6 +11,7 @@ const app = express();
 
 const port = process.env.SERVER_PORT || 3000;
 
+/*
 app.use(morgan("dev"));
 
 app.use(
@@ -18,6 +19,7 @@ app.use(
     contentSecurityPolicy: false,
   })
 );
+*/
 
 app.use(express.static(join(__dirname, "build")));
 app.use(express.static("public"));
