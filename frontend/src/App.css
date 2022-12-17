@@ -6,12 +6,12 @@
 
 h1{
   font-family: arkhip, Copperplate, Papyrus, fantasy, sans-serif;
-  color: rgb(66, 66, 165)
+  color: rgb(66, 66, 165);
 }
 
 h2 {
   font-family: arkhip, Copperplate, Papyrus, fantasy, sans-serif;
-  color: rgb(207, 207, 252)
+  color: rgb(207, 207, 252);
 }
 
 .banner_photo {
@@ -25,8 +25,8 @@ h2 {
 }
 
 .collapsible {
-  background-color: #777;
-  color: white;
+  background-color: rgb(66, 66, 165);
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -37,12 +37,12 @@ h2 {
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: rgb(104, 104, 201);
 }
 
 .collapsible:after {
   content: '\002B';
-  color: white;
+  color: black;
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -54,15 +54,34 @@ h2 {
 
 .content {
   padding: 0 18px;
+  color: black;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+  background-color: rgb(207, 207, 252);
 }
 
 .selection, .tourbtn {
   width: 33.33%;
   display: inline-block;
+}
+
+.topTour {
+  color: white;
+  font-weight: bold;
+  height: 200px;
+  margin-bottom: 50px;
+}
+.duckRow {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  background-image:"../Keep your Ducks in a row.jpg";
+}
+.bookie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* API STYLING BELOW */
@@ -103,19 +122,20 @@ h2 {
   opacity: 1;
 }
 
-body {
-  background-image: url("./assets/beached.JPG")
-  /*background-repeat: repeat-y*/
-}
-
-
 /* stripe */
 #root {
   display: flex;
   align-items: center;
 }
+#image {
+  height: 200px;
+  width: 200px;
+  background-size: 200px 200px;
+}
+
 
 body {
+  background-image: url("./assets/beached_2.jpg");
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -245,4 +265,3 @@ button:disabled {
     min-width: initial;
   }
 }
-
