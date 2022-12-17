@@ -13,11 +13,11 @@ import Profile from "./views/Profile";
 import ExternalApi from "./views/ExternalApi";
 import { useAuth0 } from "@auth0/auth0-react";
 import history from "./utils/history";
-import Fish from './components/fish/FishIndex'
+import Fish from './views/FishIndex';
 import Booking from './views/Booking'
 import Error404 from './views/Error404'
 import About from './views/About'
-//import CurrentUserProvider from './contexts/CurrentUser'
+import BookingConfirmation from "./views/BookingConfirmation";
 
 // styles
 import "./App.css";
@@ -82,6 +82,7 @@ function App() {
             <Route exact path="/fish" component={Fish} />
             <Route exact path="/about" component={About} />
             <Route exact path="/booking" component={Booking} />
+            <Route path='/BookingConfirmation' component={BookingConfirmation} />
             <Route path="/" component={Error404} />
             <Route path="/external-api" component={ExternalApi} />
           </Switch>
