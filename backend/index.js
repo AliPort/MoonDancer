@@ -5,11 +5,11 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const app = express();
-const { auth } = require("express-openid-connect");
+// const { auth } = require("express-openid-connect");
 const { Sequelize } = require("sequelize");
 
 
-
+/* //Auth0 Code
 const config = {
   authRequired: false,
   auth0Logout: true,
@@ -18,6 +18,7 @@ const config = {
   clientID: "JXIIX64zui2Z3weTAvTF20V81nBKu3kD",
   issuerBaseURL: "https://dev-q3ahisni.us.auth0.com",
 };
+*/
 
 // // SEQUELIZE CONNECTION
 const sequelize = new Sequelize(process.env.PG_URI)
@@ -36,7 +37,7 @@ try {
 //   }
 // });
 
-
+/*    //Auth0 Code
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
 
@@ -44,6 +45,7 @@ app.use(auth(config));
 app.get("/", (req, res) => {
   res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
 });
+*/
 
 // Express Settings
 app.use(cors());
