@@ -1,16 +1,20 @@
-const router = require('express').Router()
-const db = require("../models/user.js")
+//const router = require('express').Router();
+const router = express.Router ();
+const db = require("../models/user.js");
 
-const { User } = db
+// const { User } = db
 
-router.post('/', async (req, res) => {
-    const user = await User.create(req.body)
-    res.json(user)
-})
+router.get('/', (req, res) => 
+    res.send('USERS ROUTE'));
 
-router.get('/', async (req, res) => {
-    const users = await User.findAll()
-    res.json(users)
-})
+// router.post('/', async (req, res) => {
+//     const user = await User.create(req.body)
+//     res.json(user)
+// })
 
-module.exports = router
+// router.get('/', async (req, res) => {
+//     const users = await User.findAll()
+//     res.json(users)
+// })
+
+module.exports = router;
