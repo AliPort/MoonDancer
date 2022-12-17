@@ -60,7 +60,7 @@ h2 {
   background-color: #f1f1f1;
 }
 
-.selection {
+.selection, .tourbtn {
   width: 33.33%;
   display: inline-block;
 }
