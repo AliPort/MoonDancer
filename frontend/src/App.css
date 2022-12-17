@@ -39,25 +39,31 @@
   transform: translate(-50%, -50%);
   width: 100%;
 }
-footer {
-  background-color: white;
-}
-#AskDiv {
-  border: 2px solid #ccc;
-  padding: 0;
-  width: 18em;
-}
 #Ask {
-  background-color: rgb(249,232,164);
-  padding: 1em;
-  border-radius: 5px;
+  background-color: rgb(10,26,76);
+  padding: 1.5em;
+  border-radius: 10px;
   float: left;
   width: 100%;
-  margin-top: 6px;
+  margin-left: .7em;
 }
 #AskForm {
   box-shadow: none;
   padding: 0;
+}
+.AskInput {
+  border-radius: 5px;;
+  background-color: white;
+  border-style: none;
+  margin: .3em;
+  width: 90%;
+  height: 35px;
+}
+#messageField {
+  height: 100px;
+}
+#florida {
+  text-align: right;
 }
 h1{
   font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
@@ -74,13 +80,8 @@ h2 {
 h3 {
   font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
   color: rgb(21,103,255);
+  font-size: 1.5em;
 }
-
-#github_logo{
-  max-width: 3%;
-  margin-top: -2px;
-}
-
 .collapsible {
   background-color: rgb(66, 66, 165);
   color: black;
