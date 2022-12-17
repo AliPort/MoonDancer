@@ -13,9 +13,9 @@ import LoginForm from './users/LoginForm'
 
 function App() {
   return (
-    <CurrentUserProvider>
+    // <CurrentUserProvider>
       <BrowserRouter>
-        <Navigation />
+       
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/booking" component={Booking} />
@@ -28,7 +28,7 @@ function App() {
           <Route path="/" component={Error404} />
         </Switch>
       </BrowserRouter>
-    </CurrentUserProvider>
+      // </CurrentUserProvider>
   );
 }
 
