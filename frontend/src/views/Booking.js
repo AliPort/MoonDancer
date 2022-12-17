@@ -2,7 +2,7 @@ import React from 'react';
 import BookingInfo from '../components/BookingInfo';
 
 class Booking extends React.Component {
-	
+
 	componentDidMount() {
 	this.Tours();
 };
@@ -35,7 +35,6 @@ render() {
 			</button>
 			<div className="content">
   				<p>INFORMATION ABOUT THE TOUR</p>
-				<BookingInfo />
 			</div>
 		</div>
 		<div className="selection">
@@ -45,20 +44,19 @@ render() {
 			</button>
 			<div className="content">
   				<p>INFORMATION ABOUT THE TOUR</p>
-				<BookingInfo />
 			</div>
 		</div>
 		<div className="selection">
 			<button className="collapsible">
-				<h2>Ocean Fishing</h2>
+				<h2>Open Ocean Fishing</h2>
 				<h3>PLACEHOLDER FOR AN IMAGE</h3>
 			</button>
 			<div className="content">
   				<p>INFORMATION ABOUT THE TOUR</p>
-				<BookingInfo />
 			</div>
 		</div>
 	</div>
+	<BookingInfo />
 	</main>
 	);
 };
