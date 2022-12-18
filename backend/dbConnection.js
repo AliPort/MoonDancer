@@ -1,5 +1,6 @@
 require('dotenv').config();
-const { ConnectionString } = require('connection-string');
+const { ConnectionString } = require('connection-String');
+const express = require('express');
 
 const initOptions = {
   // Capitalizes all SQL generated

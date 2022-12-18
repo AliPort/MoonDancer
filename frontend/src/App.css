@@ -3,67 +3,56 @@
   font-family: arkhip;
   src: url(./assets/arkhip_font.woff);
 }
-.nav-container {
-  font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
-  font-size: 1.5em;
-  margin-bottom: 0;
-}
 .item {
   padding-top: 1em;
+  padding-left: 2em;
 }
 .masthead {
   height: 100vh;
-  min-height: 900px;
+  min-height: 1000px;
   background-color: rgb(10,26,76);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-.img_fluid {
-  max-width: 100%;
-  height: auto;
+.img-fluid {
+  margin-top: -4em;
 }
-.btn-block {
-  margin-top: -9em;
-  background-color: rgb(249,232,164);
-  position: relative;
-  height: 5em;
-}
-.booking {
-  text-decoration: none;
-  margin: 0;
-  padding-top: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+#footermid{
+  text-align: right;
 }
 #Ask {
   background-color: rgb(10,26,76);
   padding: 1.5em;
   border-radius: 10px;
-  float: left;
-  width: 100%;
-  margin-left: .7em;
 }
 #AskForm {
-  box-shadow: none;
   padding: 0;
+  box-shadow: none;
 }
-.AskInput {
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
   border-radius: 5px;;
   background-color: white;
   border-style: none;
-  margin: .3em;
-  width: 90%;
-  height: 35px;
+  resize: vertical;
 }
-#messageField {
-  height: 100px;
+/* .AskInput {
+  border-radius: 5px;;
+  background-color: white;
+  border-style: none;
+  margin-bottom: .5em;
+  height: 2em;
+  width: auto;
+} */
+#askSubmit {
+  background-color: rgb(249,232,164);
 }
-#florida {
-  text-align: right;
+.text-center {
+  background-color: #ECEFF1
+}
+hr {
+  width: 60px; 
+  background-color: #7c4dff; 
+  height: 2px;
 }
 
 h1{
@@ -324,5 +313,14 @@ button:disabled {
   form {
     width: 80vw;
     min-width: initial;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .img-fluid {
+    margin-top: .5em;
+  }
+  #footermid {
+    text-align: center;
   }
 }

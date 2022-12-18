@@ -7,7 +7,7 @@ function AskTheCaptain() {
             <input className="AskInput" type="email" name="email" placeholder="E-Mail" required/><br/>
             <input className="AskInput" type="text" name="subject" placeholder="Subject" required/><br/>
             <input id="messageField" className="AskInput" type="text" name="message" placeholder="Your Message" required/><br/>
-            <input className="AskInput" type="submit" value="Submit" />
+            <input id="askSubmit" className="AskInput" type="submit" value="Submit" />
         </form>
     </div>
 )};
