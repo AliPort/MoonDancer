@@ -42,7 +42,7 @@ const cn = {
 const db = pgp(cn);
 
 // Connect to DB
-db.connect(cnObj)
+db.connect()
   .then(obj => {
     // After query runs succesfully, disconnect
     obj.done();

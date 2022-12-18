@@ -1,25 +1,31 @@
-// Modules and Globals
-require("dotenv").config();
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const path = require("path");
-const app = express();
-const { queryToFetchAllProducts } =  require("./queries/index.js")
 
+const { queryToFetchAllUsers } =  require("./queries/index.js")
+const { queryToFetchAllTours } = require("./queries/index.js")
 
-const fetchAllProducts = async  () => {
-    const tours = await queryToFetchAllProducts()
-    console.log('DEM TOURS ====>', tours)
+const fetchAllUsers = async  () => {
+    const products = await queryToFetchAllUsers()
+    console.log('DEM USERS ====>', products)
 }
 
-fetchAllProducts()
+
+const fetchAllTours = async () => {
+  const products = await queryToFetchAllTours()
+  console.log('DEM TOURS ====>', products)
+}
+
+
+fetchAllUsers()
+fetchAllTours()
+fetchAllUsers()
+
+
+
 
 // Express Settings
-app.use(cors());
-app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// app.use(cors());
+// app.use(express.static("public"));
+// app.use(express.urlencoded({ extended: true }));
+/* app.use(bodyParser.json());
 
 // ROOT
 app.get("/", (req, res) => {
@@ -36,11 +42,11 @@ if (process.env.NODE_ENV === "production") {
 // Controllers & Routes
 
 app.use(express.urlencoded({ extended: true }));
-
-app.use({ queryToFetchAllProducts }, require('./controllers/tours'))
+// app.use({ queryToFetchAllProducts }, require('./controllers/tours'))
 // app.use({ queryToFetchAllProducts }, require('./controllers/users'))
 
 // Listen for Connections
 app.listen(process.env.PORT, () => {
   console.log(`Listening on ${process.env.PORT}`);
 });
+*/
