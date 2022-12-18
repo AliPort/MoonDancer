@@ -1,50 +1,55 @@
 import React from "react";
-import FullLogo from '../assets/FullLogo.jpg';
 import github from "../assets/github.png"
+import AskTheCaptain from "./AskTheCaptain";
+import Icon from '../assets/moondancericon.png'
 
 const Footer = () => (
-  <footer className="bg-light p-3 text-center">
-    <h6>SITEMAP</h6>
-      <a className="site_map" href="/">HOME</a><br/>
-      <a className="site_map" href="/about">ABOUT</a><br/>
-      <a className="site_map" href="/booking">CHARTERS & TOURS</a><br/>
-      <a className="site_map" href="/fish">FISH INDEX</a><br/>
-    <img src={FullLogo}  alt="company logo" />; 
-    <h1>MoonDancer Boat Charters</h1>
-  
-  <form>
-  <h2>Ask the Captain</h2>
-   <label>
-    First Name:
-    <input type="text" name="name" />
-   </label>
-   <label> 
-    Last Name:
-    <input type="text" address="address" />
-   </label>
-   <label>
-    Email*:
-    <input type="email" email="email" />
-  </label>
-  <label>
-    Subject:
-    <input type="text" subject="subject" />
-  </label>
-  <input type="submit" value="Submit" />
-</form>
-    <p>
-      © 2022 MoonDancer Boat Charters Designed by <a href="https://github.com/AliPort">Alita Portillo</a>, 
-      <a href="https://github.com/EPtackArts"> Elizabeth Ptack</a>, 
-      <a href="https://github.com/BarbarianWizard"> Kevin Beck</a>, and
-      <a href="https://github.com/wms09291963"> Captain William Smith  </a>
-      <a href='https://github.com/AliPort/MoonDancer'><img id="github_logo" src={github} alt="github logo"/></a>
-    </p>
+    <footer className="text-center text-lg-start text-dark">
+      <section className="AskCapDiv">
+        <div className="container text-center text-md-start mt-0">
+          <div className="row mt-0">
+          {/* ASK THE CAPTAIN */}
+            <div className="col-md-3 col-lg-5 col-xl-4 mx-auto mt-4">
+              <h6 className="text-uppercase fw-bold">Ask Captain William</h6>
+              <hr className="mb-4 mt-0 d-inline-block mx-auto"/>
+              <AskTheCaptain/>
+            </div>
+          {/* CONTACT & WHILE YOU'RE HERE */}
+          <div id="footermid" className="col-md-3 col-lg-3 col-xl-2 ml-auto mt-4">
+            <h6 className="text-uppercase fw-bold">Contact</h6>
+            <hr className="mb-4 mt-0 d-inline-block mx-auto"/>
+            <p><a className="text-dark">Email</a></p>
+            <p><a className="text-dark">Tel</a></p>
+            <h6 className="text-uppercase fw-bold">While You're Here</h6>
+            <hr className="mb-4 mt-0 d-inline-block mx-auto"/>
+            <p><a target="blank" href="https://www.visitflorida.com/" className="text-dark">Visit Florida</a></p>
+            <p><a target="blank" href="https://www.visitflorida.com/listing/wakulla-diving-center/29406/" className="text-dark">Wakulla Diving Center</a></p>
+            <p><a target="blank" href="https://crumsminimall.com/" className="text-dark">Crum's Mini Mall</a></p>
+            <p><a target="blank" href="https://gulfspecimen.org/" className="text-dark">Gulf Specimen Marine Lab</a></p>
+          </div>
+          {/* SITEMAP & CREDITS */}
+          <div className="col-md-3 col-lg-3 col-xl-2 mr-auto mt-4">
+            <h6 className="text-uppercase fw-bold">Sitemap</h6>
+            <hr className="mb-4 mt-0 d-inline-block mx-auto"/>
+            <p><a href="/" className="text-dark">HOME</a></p>
+            <p><a href="/about" className="text-dark">ABOUT</a></p>
+            <p><a href="/booking" className="text-dark">BOOK YOUR TOUR</a></p>
+            <p><a href="/fish" className="text-dark">FISH INDEX</a></p>
+            <h6 className="text-uppercase fw-bold">Credits</h6>
+            <hr className="mb-4 mt-0 d-inline-block mx-auto"/>
+            <p><a target="blank" href="https://github.com/AliPort" className="text-dark">Alita Portillo</a></p>
+            <p><a target="blank" href="https://github.com/EPtackArts" className="text-dark">Elizabeth Ptack</a></p>
+            <p><a target="blank" href="https://github.com/BarbarianWizard" className="text-dark">Kevin Beck</a></p>
+            <p><a target="blank" href="https://github.com/wms09291963" className="text-dark">Captain Will Smith</a></p>
+            <p><a target="blank" href="https://github.com/AliPort/MoonDancer" className="text-dark"><img src={github} width="30px"/></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div className="text-center p-3">
+      <img src={Icon} width="60px"/> © 2022 Copyright: MoonDancer Boat Charters - All Rights Reserved
+    </div>
   </footer>
 );
-
-
-
-<link to={{ pathname: "https://www.visitflorida.com/listing/wakulla-diving-center/29406"}} target="_blank" />
-
 
 export default Footer;

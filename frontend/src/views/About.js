@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Captain from '../assets/Captain in a wet suit.jpeg'
 
 function About() {
 	return (
@@ -9,7 +10,7 @@ function About() {
 		 <h1>ABOUT</h1>
            <Row>
              <Col><img id="captn"
-		        src={ require('../assets/Captain in a wet suit.JPG')} />
+		        src={Captain} />
 			 </Col>
 
              <Col><h2>25 Years of Boating Experience</h2>

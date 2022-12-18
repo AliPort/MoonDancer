@@ -1,17 +1,15 @@
-import React, { Fragment } from "react";
-import beached from '../assets/beached.JPG';
+import React from "react";
+import FullLogo from '../assets/FullLogo.jpg'
 
 const Home = () => {
  
   return (
-    <Fragment>
-      <h1>MoonDancer Boat Charters</h1>
-      <img className="banner_photo" src={beached} alt="boat next to shoreline" />
-      <a className="book_trip" href="/booking">BOOK YOUR TOUR TODAY</a>
-      {/* I was thinking that the title and the button could be 
-      laid out on top of the photo - similar to the Florida Sport Fishing site */}
-      <p>Enjoy the fishing trip  of a lifetime in beautiful Apalachee Bay, Port of Panacea, Florida! This incredible fishing destination offers some of the finest eating fish and a thrill you wont forget. From Apalachee Bay to AlligatorPoint to the deep blue ocean we have the knowledge and experience to make your fishing dreams come true ~ Moondancer</p>
-    </Fragment>
+    <header className="masthead">
+      <div className="container h-100">
+        <img className="img-fluid" src={FullLogo} alt="Moondancer Logo"/>
+        <button class="btn btn-primary" type="button" href="/booking">BOOK YOUR TOUR TODAY!</button>
+      </div>
+    </header>
   )
 };
 

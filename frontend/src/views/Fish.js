@@ -5,11 +5,11 @@ const Fish = () => {
   return (
     <Fragment>
         <h1>FISH INDEX</h1>
-        <div class="container">
-        <div class="row">
-        <div class="col">
-          <div class="fish1box">
-            <div class = "imgForBox">
+        <div className="container">
+        <div className="row">
+        <div className="col">
+          <div className="fish1box">
+            <div className = "imgForBox">
             <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
           </div>
          </div> 
@@ -31,9 +31,9 @@ const Fish = () => {
           <h3>Behavior</h3>
           <p>Spawn January through March. Young adults are predominantly female and transform into males as they grow older.  The maximum size for rock sea bass is about 10 inches.</p>
         </div>
-        <div class="col">
-          <div class="fish1box">
-            <div class = "imgForBox">
+        <div className="col">
+          <div className="fish1box">
+            <div className = "imgForBox">
               <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
           </div>
          </div> 
@@ -59,9 +59,9 @@ const Fish = () => {
              Ability to camouflage by changing colors to match their surrounding habitat and avoid predators.
              </ul>
         </div>
-    <div class="col">
-      <div class="fish1box">
-         <div class = "imgForBox">
+    <div className="col">
+      <div className="fish1box">
+         <div className = "imgForBox">
             <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
           </div>
          </div> 
@@ -83,9 +83,9 @@ const Fish = () => {
       <p>Schooling fish that migrates northward in spring, returning to southerly waters when water temperature drops below 70 degrees F.  Spawn offshore from spring through summer.
         Feeds on small fishes and invertebrates.</p>
     </div>
-    <div class="col">
-    <div class="fish1box">
-      <div class = "imgForBox">
+    <div className="col">
+    <div className="fish1box">
+      <div className = "imgForBox">
         <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
       </div>
       </div> 
@@ -108,9 +108,9 @@ const Fish = () => {
       <h3>Behavior</h3>
         <p>They spawn in spring and early summer. Feeds on crabs, squid and small fishes.</p>
     </div>
-    <div class="col">
-    <div class= "fish1box">
-        <div class = "imgForBox">
+    <div className="col">
+    <div className= "fish1box">
+        <div className = "imgForBox">
             <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
         </div>
     </div> 
@@ -132,9 +132,9 @@ const Fish = () => {
       <h3>Behavior</h3>
       <p>Thought to prefer high wave action areas such as sand bars where the crashing waves dislodge and suspend small crabs and other small crustaceans. Feeds on fishes and invertabrates.      </p>
     </div>
-    <div class="col">
-     <div class="fish1box">
-       <div class = "imgForBox">
+    <div className="col">
+     <div className="fish1box">
+       <div className = "imgForBox">
             <img src="../assets/Rock Sea Bass.jpg" width="175px"/>
         </div>
       </div> 
