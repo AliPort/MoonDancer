@@ -9,11 +9,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  NavLink } from 'reactstrap';
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -38,7 +34,7 @@ export default class NavBar extends React.Component {
             to="/"
             exact
             activeClassName="router-link-exact-active">
-            <img src={Icon} alt="moondancer icon" width="80px"/>
+            <div id="icon"><img src={Icon} alt="moondancer icon" width="80px"/></div>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
