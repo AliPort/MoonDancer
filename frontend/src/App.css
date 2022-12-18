@@ -88,55 +88,15 @@ h3 {
   color: #4582A1 ;
   font-size: 1.5em;
 }
-.selection {
-  margin: 10px;
-}
-.collapsible {
-  background-color: white;
-  border-radius: 30px;
-  padding: 30px;
-  width: 100%;
-  border: none;
-  text-align: center;
-}
-
-.active, .collapsible:hover {
-  background-color: rgb(104, 104, 201);
-}
-
-.collapsible:after {
-  content: '\002B';
-  color: black;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  color: black;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: rgb(207, 207, 252);
-}
-
-.selection, .tourbtn {
-  width: 33.33%;
-  display: inline-block;
-}
-
 .topTour {
   color: white;
   font-weight: bold;
   height: 200px;
   margin-bottom: 50px;
 }
-
+.accordion-item {
+  border-radius: 30px;
+}
 /* .duckRow {
   display: flex;
   align-items: center;
