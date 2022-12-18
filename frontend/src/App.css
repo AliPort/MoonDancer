@@ -18,70 +18,86 @@
 #footermid{
   text-align: right;
 }
-#Ask {
-  background-color: rgb(10,26,76);
-  padding: 1.5em;
+#AskForm {
+  box-shadow: none;
+} */
+* {
+  box-sizing: border-box;
+}
+input[type=text] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-style: none;
   border-radius: 10px;
 }
-#AskForm {
-  padding: 0;
-  box-shadow: none;
-}
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 5px;;
-  background-color: white;
-  border-style: none;
-  resize: vertical;
-}
-/* .AskInput {
-  border-radius: 5px;;
-  background-color: white;
-  border-style: none;
-  margin-bottom: .5em;
-  height: 2em;
-  width: auto;
-} */
-#askSubmit {
+input[type=submit]{
   background-color: rgb(249,232,164);
+  color: rgb(10,26,76);
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
 }
-.text-center {
+input[type=submit]:hover {
+  background-color: #4582A1;
+  color: rgb(249,232,164);
+}
+#ask {
+  border-radius: 10px;
+  background-color: rgb(10,26,76);
+}
+footer {
   background-color: #ECEFF1
+}
+.btn{
+  font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
+  font-size: 2em;
+  background-color: rgb(249,232,164);
+  color: rgb(10,26,76);
+  padding: 1em;
+  margin-top: -6em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+.btn:hover {
+  background-color: #4582A1;
+  color: rgb(249,232,164);
 }
 hr {
   width: 60px; 
-  background-color: #7c4dff; 
+  background-color: #4582A1; 
   height: 2px;
 }
-
+.card, #cap {
+  border-radius: 30px;
+}
 h1{
   font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
   color: rgb(10,26,76);
   margin: 0;
   padding: 0;
 }
-
 h2 {
   font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
-  color: rgb(207, 207, 252);
+  color: #4582A1;
 }
-
 h3 {
   font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
-  color: rgb(21,103,255);
+  color: #4582A1 ;
   font-size: 1.5em;
 }
+.selection {
+  margin: 10px;
+}
 .collapsible {
-  background-color: rgb(66, 66, 165);
-  color: black;
-  cursor: pointer;
-  padding: 18px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px;
   width: 100%;
   border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
+  text-align: center;
 }
 
 .active, .collapsible:hover {
@@ -121,12 +137,12 @@ h3 {
   margin-bottom: 50px;
 }
 
-.duckRow {
+/* .duckRow {
   display: flex;
   align-items: center;
   height: 200px;
   background-image:"../Keep your Ducks in a row.jpg";
-}
+} */
 
 .bookie {
   display: flex;
@@ -308,19 +324,113 @@ button:disabled {
     transform: rotate(360deg);
   }
 }
-
-@media only screen and (max-width: 600px) {
-  form {
-    width: 80vw;
-    min-width: initial;
+@media only screen and (max-width: 1399px) {
+  .masthead {
+    min-height: 850px;
+  }
+  #cap {
+    width: 300px;
   }
 }
-
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1199px) {
+  .masthead {
+    min-height: 700px;
+  }
+  .btn {
+    margin-top: -5em;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .masthead {
+    min-height: 550px;
+  }
+  .btn {
+    margin-top: -2.5em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 767px) {
   .img-fluid {
-    margin-top: .5em;
+    margin-top: -1em;
   }
   #footermid {
     text-align: center;
+  }
+  .masthead {
+    min-height: 460px;
+  }
+  .btn {
+    margin-top: -2em;
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  #icon {
+    margin-left: 255px;
+  }
+  .nav-item {
+    text-align: center;
+    margin-left: -30px;
+  }
+}
+@media only screen and (max-width: 575px){
+  .btn {
+    margin-top: -3em;
+    width: 90%;
+    margin-left: 30px;
+  }
+  #icon {
+    margin-left: 248px;
+  }
+  .nav-item {
+    text-align: center;
+    margin-left: -35px;
+  }
+  #cap {
+    width: 400px;
+  }
+  .card {
+    width: 400px;
+    margin-left: 60px;
+  }
+}
+@media only screen and (max-width: 412px) {
+  #icon {
+    margin-left: 225px;
+  }
+  .btn {
+    width: 80%;
+    font-size: 1.2em;
+    margin-left: 50px;
+  }
+  .img-fluid {
+    width: 80%;
+    margin-left: 50px;
+  }
+  .masthead {
+    min-height: 350px;
+  }
+  .card {
+    width: 400px;
+    margin-left: 80px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .btn {
+    width: 70%;
+    font-size: 1.2em;
+    margin-left: 85px;
+  }
+  .img-fluid {
+    margin-left: 60px;
+  }
+  input[type=text] {
+    width: 70%;
+  }
+  #bottomfoot {
+    font-size: .5em;
   }
 }
