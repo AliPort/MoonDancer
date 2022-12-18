@@ -25,11 +25,11 @@ const initOptions = {
 const pgp = require('pg-promise')(initOptions);
 
 // // Parse the connection string into an object
-const cnObj = new ConnectionString(process.env.DATABASE_URL);
+const cnObj = new ConnectionString(process.env.PG_URI);
 
 // DB Connection String
 const cn = {
-  host: 'railway.app',
+  host: 'containers-us-west-139.railway.app',
   port: 7121,
   database: 'railway',
   user: 'postgres',
