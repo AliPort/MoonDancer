@@ -18,8 +18,8 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     tourName: DataTypes.STRING,
-    date: DataTypes.DATE,
-    timeOfDay: {
+    tourDate: DataTypes.DATE,
+    tourTime: {
       type: DataTypes.STRING,
       values: ['Morning', 'Afternoon', 'All Day']
     }
