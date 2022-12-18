@@ -25,7 +25,7 @@
         "method-override": "^3.0.0",
         "nodemon": "^2.0.12",
         "packet-reader": "^1.0.0",
-        "pg": "^8.6.0",
+        "pg": "^8.8.0",
         "pg-connection-string": "^2.5.0",
         "pg-hstore": "^2.3.4",
         "pg-int8": "^1.0.1",

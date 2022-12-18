@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# MoonDancer
+=======
 # MoonDancer Charters, LLC 
 
 ## Inspiration for the website
@@ -39,3 +42,4 @@ Stripe (payment processing)
 Most (if not all) images for the website are placeholders and will be replaced with professional photos vs the current iphone pics. 
 
 
+>>>>>>> 25b8e78ebb412dffa013c49aefb83e15a5fe31b6
