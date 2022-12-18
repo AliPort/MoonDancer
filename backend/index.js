@@ -21,6 +21,16 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+//create a user
+
+app.post("/todos", async (req, res) => {
+  try {
+    const { description } = req.body;
+    const newTodo = await pool.query(
+      "INSERT INTO todo (description) VALUES($1) RETURNING *",
+      [description]
+    );
+
     res.json(newTodo.rows[0]);
   } catch (err) {
     console.error(err.message);
@@ -63,6 +73,12 @@ app.put("/todos/:id", async (req, res) => {
       "UPDATE todo SET description = $1 WHERE todo_id = $2",
       [description, id]
     );
+
+    res.json("Todo was updated!");
+  } catch (err) {
+    console.error(err.message);
+  }
+});
 
 app.use(express.urlencoded({ extended: true }));
 
