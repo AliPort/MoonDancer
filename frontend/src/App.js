@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-//import {  Route, Router, Switch } from 'react-router-dom'
- import { loadStripe } from "@stripe/stripe-js";
- import { Elements } from "@stripe/react-stripe-js";
+import {  Route, Router, Switch } from 'react-router-dom'
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
  import CheckoutForm from "./components/stripe/CheckoutForm"
 // import Loading from "./components/Loading";
-// import NavBar from "./components/NavBar";
-// import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import Home from "./views/Home";
 import Fish from "./views/Fish";
 import history from "./utils/history";
