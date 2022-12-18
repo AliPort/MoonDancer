@@ -1,31 +1,25 @@
+// Modules and Globals
+require("dotenv").config();
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const path = require("path");
+const app = express();
+const { queryToFetchAllProducts } =  require("./queries/index.js")
 
-const { queryToFetchAllUsers } =  require("./queries/index.js")
-const { queryToFetchAllTours } = require("./queries/index.js")
 
-const fetchAllUsers = async  () => {
-    const products = await queryToFetchAllUsers()
-    console.log('DEM USERS ====>', products)
+const fetchAllProducts = async  () => {
+    const products = await queryToFetchAllProducts()
+    console.log('DEM PRODUCTS ====>', products)
 }
 
-
-const fetchAllTours = async () => {
-  const products = await queryToFetchAllTours()
-  console.log('DEM TOURS ====>', products)
-}
-
-
-fetchAllUsers()
-fetchAllTours()
-fetchAllUsers()
-
-
-
+fetchAllProducts()
 
 // Express Settings
-// app.use(cors());
-// app.use(express.static("public"));
-// app.use(express.urlencoded({ extended: true }));
-/* app.use(bodyParser.json());
+app.use(cors());
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
     res.json(newTodo.rows[0]);
   } catch (err) {
@@ -71,23 +65,11 @@ app.put("/todos/:id", async (req, res) => {
     );
 
 app.use(express.urlencoded({ extended: true }));
-// app.use({ queryToFetchAllProducts }, require('./controllers/tours'))
-// app.use({ queryToFetchAllProducts }, require('./controllers/users'))
 
-app.delete("/todos/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const deleteTodo = await pool.query("DELETE FROM todo WHERE todo_id = $1", [
-      id
-    ]);
-    res.json("Todo was deleted!");
-  } catch (err) {
-    console.log(err.message);
-  }
+app.use('/api/tours', require('./controllers/tours'))
+app.use('/api/users', require('./controllers/users'))
+
+// Listen for Connections
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on ${process.env.PORT}`);
 });
-
-
-app.listen(5000, () => {
-  console.log("server has started on port 5000");
-});
-*/
