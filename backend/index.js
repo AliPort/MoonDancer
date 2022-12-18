@@ -9,8 +9,8 @@ const { queryToFetchAllProducts } =  require("./queries/index.js")
 
 
 const fetchAllProducts = async  () => {
-    const products = await queryToFetchAllProducts()
-    console.log('DEM PRODUCTS ====>', products)
+    const tours = await queryToFetchAllProducts()
+    console.log('DEM TOURS ====>', tours)
 }
 
 fetchAllProducts()
@@ -37,8 +37,8 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api/tours', require('./controllers/tours'))
-app.use('/api/users', require('./controllers/users'))
+app.use({ queryToFetchAllProducts }, require('./controllers/tours'))
+// app.use({ queryToFetchAllProducts }, require('./controllers/users'))
 
 // Listen for Connections
 app.listen(process.env.PORT, () => {

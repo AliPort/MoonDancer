@@ -1,11 +1,11 @@
-//const router = require('express').Router();
-const router = express.Router ();
-const db = require("../models/user.js");
+// const router = require('express').Router();
+// const router = express.Router ();
+// const db = require("../models/user.js");
 
 // const { User } = db
 
-router.get('/', (req, res) => 
-    res.send('USERS ROUTE'));
+// router.get('/', (req, res) => 
+//    res.send('USERS ROUTE'));
 
 // router.post('/', async (req, res) => {
 //     const user = await User.create(req.body)
@@ -17,4 +17,4 @@ router.get('/', (req, res) =>
 //     res.json(users)
 // })
 
-module.exports = router;
+// module.exports = router;
