@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import {  Route, Router, Switch } from 'react-router-dom'
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
  import CheckoutForm from "./components/stripe/CheckoutForm"

@@ -1,22 +1,58 @@
+const express = require('express');
+const axios = require('axios');
+const pgp = require('pg-promise')
 
+const app = express()
+
+app.use(express.json());
+// const
 const { queryToFetchAllUsers } =  require("./queries/index.js")
 const { queryToFetchAllTours } = require("./queries/index.js")
+const { queryToInsertBayTour } = require("./queries/index.js")
+
 
 const fetchAllUsers = async  () => {
+  try {
     const products = await queryToFetchAllUsers()
     console.log('DEM USERS ====>', products)
+  } catch (error) {
+console.error(error)
+}}
+
+const fetchAllTours = async  () => {
+  try {
+    const products = await queryToFetchAllTours()
+    console.log('DEM TOURS ====>', products)
+  } catch (error) {
+console.error(error)
+}}
+
+const addBayTour = async () => {
+  try {
+    const data = await queryToInsertBayTour()
+    console.log('Bay Tour added', data)
+  } catch (error) {
+    console.error(error)
+  }
 }
-
-
-const fetchAllTours = async () => {
-  const products = await queryToFetchAllTours()
-  console.log('DEM TOURS ====>', products)
-}
-
 
 fetchAllUsers()
 fetchAllTours()
-fetchAllUsers()
+addBayTour()
+
+
+app.post('/resources', async (req, res) => {
+  try {
+    const data = req.body;
+    const db = pgp('connection string');
+    const query = 'INSERT INTO resources (name, description) VALUES ($1, $2)';
+    const result = await db.none(query, [data.name, data.description]);
+    res.send({ success: true });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ success: false });
+  }
+});
 
 
 
@@ -85,9 +121,8 @@ app.delete("/todos/:id", async (req, res) => {
     console.log(err.message);
   }
 });
-
+*/
 
 app.listen(5000, () => {
   console.log("server has started on port 5000");
 });
-*/
