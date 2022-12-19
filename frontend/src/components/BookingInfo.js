@@ -1,9 +1,14 @@
+
 import React from "react";
 import { withRouter } from 'react-router-dom';
+import dayjs from 'dayjs';
 import { TextField } from '@mui/material';
+import { LocalizationProvider } from './MaterialUIPickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { DatePicker } from '@mui/x-date-pickers-pro/DatePicker';
+
+// import { MaterialUI }
 import axios from 'axios';
 
 const tourPrices= {
@@ -53,8 +58,9 @@ class BookingInfo extends React.Component {
 	}
 
 	handleTourDateChange = (event) => {
-		this.setState({ tourDate: event.DatePicker.newValue})
-	}
+		this.setState({ tourDate: event.target.value});
+    }
+	  
 	  
 	handleOptionChange = (event) => {
 		this.setState({
@@ -65,12 +71,15 @@ class BookingInfo extends React.Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault();
-		const { tourName, timeOfDay, tourDate } = this.state;
+		const { tourName, timeOfDay , tourDate} = this.state;
 		
-		axios.post('/api/tours', { tourName, timeOfDay, tourDate })
+		console.log('Request body:', { tourName, timeOfDay, tourDate });
+		
+		axios.post(`${process.env.REACT_APP_SERVER_URL}api/tours`, { tourName, timeOfDay, tourDate })
 		  .then(response => {
+			console.log('Response from backend:', response);
 			if (response.status === 200) {
-				this.props.history.push('../views/BookingConfirmation.js');
+			  this.props.history.push('../views/BookingConfirmation.js');
 			}
 		  })
 		  .catch(error => {
@@ -81,29 +90,29 @@ class BookingInfo extends React.Component {
 	  
 	  
 	  
+	  
 
 	render() {
 	return(
 	<main>
     	<form id="booknow" action="/bookingconfirmation" onSubmit={this.handleSubmit}>
 		<h1>Book your MoonDancer Tour</h1>
-		<select required onChange={this.handleTourNameChange} value={this.state.tourName}>
+		<select required onChange={this.handleTourNameChange} >
 				<option className="tourName" value= " " selected disabled>Select a Tour</option>
       			<option className="tourName" id="bayauto" value="bay">Bay Fishing</option>
       			<option className="tourName" id="riverauto" value="river">River Fishing</option>
       			<option className="tourName" id="oceanauto" value="ocean">Open Ocean Fishing</option> 
   	   		</select>
-			<div className="booking_div" required onChange={this.handleTourDateChange}>
+			<div className="booking_div" required onChange={this.handleTourDateChange} >
 				<LocalizationProvider dateAdapter={AdapterDayjs}>
-				<DatePicker
-					label="Select a Tour Date"
-					value={this.state.value}
-					onChange={(newValue) => {
-					this.setState({ value: newValue });
-					}}
-					renderInput={(params) => <TextField {...params} />}
-				/>
-				</LocalizationProvider>
+				<DesktopDatePicker
+            label="Tour Date"
+            inputFormat="MM/DD/YYYY"
+            value={this.state.tourDate}
+            onChange={this.handleTourDateChange}
+            renderInput={(params) => <TextField {...params} />}
+          />
+		</LocalizationProvider>
 			</div>
 			<select required onChange={this.handleTimeOfDayChange} value={this.state.timeOfDay}>
 				<option className="timeOfDay" value=" " selected disabled>Select a Time of Day</option>

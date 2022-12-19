@@ -1,19 +1,21 @@
 const express = require('express');
-const axios = require('axios');
-const pgp = require('pg-promise')
+const cors = require('cors')
+// const axios = require('axios');
+// const pgp = require('pg-promise')
 const { db } = require("./dbConnection");
+const { queryToFetchAllTours } = require("./queries/index.js")
+
 const app = express()
 
 
-
+// MIDDLEWARE
 app.use(express.json());
-
-
+app.use(cors());
 // const
-const { queryToFetchAllUsers } =  require("./queries/index.js")
-const { queryToFetchAllTours } = require("./queries/index.js")
-const { queryToInsertTourName } = require("./queries/index.js")
+// const { queryToFetchAllUsers } =  require("./queries/index.js")
 
+// const { queryToInsertTourData } = require("./queries/index.js")
+/*
 const fetchAllUsers = async  () => {
   try {
     const products = await queryToFetchAllUsers()
@@ -21,6 +23,7 @@ const fetchAllUsers = async  () => {
   } catch (error) {
 console.error(error)
 }}
+*/
 
 const fetchAllTours = async  () => {
   try {
@@ -30,25 +33,26 @@ const fetchAllTours = async  () => {
 console.error(error)
 }}
 
-const addTourName = async (tour_name) => {
+/*
+const insertTourData = async (tourData) => {
   try {
-    const products = await queryToInsertTourName('asdflksf')
-    console.log(tour_name)
-    console.log('Tour name added', products)
+    const tourData = await queryToInsertTourData()
+    console.log()
+    console.log('TourData added', tourData)
   } catch (error) {
     console.error(error)
   }
 }
+*/
 
-fetchAllUsers()
-// addTourName('asdfad')
+// fetchAllUsers()
+// insertTourData()
 fetchAllTours()
 
 
 app.post('/api/tours', async (req, res) => {
   try {
     const data = req.body;
-    const db = pgp('connection string');
     const query = 'INSERT INTO tours (tour_name, time_of_day, tour_date) VALUES ($1, $2, $3)';
     const result = await db.none(query, [data.tourName, data.timeOfDay, data.tourDate]);
     res.send({ success: true });
@@ -58,10 +62,10 @@ app.post('/api/tours', async (req, res) => {
   }
 });
 
-/*
 
+/*
 // Express Settings
-app.use(cors());
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -129,4 +133,5 @@ app.put("/todos/:id", async (req, res) => {
 // Listen for Connections
 app.listen(process.env.PORT, () => {
   console.log(`Listening on ${process.env.PORT}`);
+  console.log(`Listening on ${process.env.PGPORT}`);
 });
