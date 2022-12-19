@@ -171,6 +171,13 @@ body, html {
 body {
   display:table-cell;
   vertical-align:middle;
+  background-image: url("./assets/beached_2.jpg");
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 #booknow {
   margin: auto;
@@ -200,7 +207,7 @@ select {
   color:  rgb(249,232,164);
 }
 #thankyou {
-  background-color:   rgb(10,26,76);
+  background-color: rgb(10,26,76);
   text-align: center;
 }
 .thanks {
@@ -208,66 +215,11 @@ select {
   font-weight: bold;
   margin-top: 30px;
 }
-.carousel-control-next, .carousel-control-prev {
-  color: black;
-}
-.carousel-indicators, .carousel-control-prev, .carousel-control-next {
-  margin: 0x;
-}
-.card {
-  margin: 50px;
-}
-/* .duckRow {
-  display: flex;
-  align-items: center;
-  height: 200px;
-  background-image:"../Keep your Ducks in a row.jpg";
-} */
-
-.bookie {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+form {
+  padding: 40px;
 }
 
 /* API STYLING BELOW */
-/* auth0 */
-.next-steps .fa-link {
-  margin-right: 5px;
-}
-
-/* Fix for use only flexbox in content area */
-.next-steps .row {
-  margin-bottom: 0;
-}
-
-.next-steps .col-md-5 {
-  margin-bottom: 3rem;
-}
-
-@media (max-width: 768px) {
-  .next-steps .col-md-5 {
-    margin-bottom: 0;
-  }
-}
-
-.spinner {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.result-block-container .result-block {
-  opacity: 1;
-}
-
 /* stripe */
 #root {
   display: flex;
@@ -278,30 +230,6 @@ select {
   width: 200px;
   background-size: 200px 200px;
 }
-
-
-body {
-  background-image: url("./assets/beached_2.jpg");
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-form {
-  width: 30vw;
-  min-width: 500px;
-  align-self: center;
-  box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
-    0px 2px 5px 0px rgba(50, 50, 93, 0.1), 0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
-  border-radius: 7px;
-  padding: 40px;
-}
-
 
 #payment-message {
   color: rgb(105, 115, 134);

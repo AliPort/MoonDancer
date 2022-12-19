@@ -14,7 +14,6 @@ import Booking from './views/Booking'
 import Error404 from './views/Error404'
 import About from './views/About'
 import BookingConfirmation from "./views/BookingConfirmation";
-
 // styles
 import "./App.css";
 
