@@ -1,12 +1,9 @@
 import React from 'react';
 import BookingInfo from '../components/BookingInfo';
-import { Container } from 'reactstrap';
 import TourDescriptions from '../components/TourDescriptions';
 
 function Booking() {
 	return (
-	<Container>
-	<main>
 	<div className="container my-5">
 		<button className="toursbtn btn-primary" type="button"><a href="#booknow">BOOK YOUR TOUR TODAY!</a></button>
  		<section>
@@ -30,11 +27,9 @@ function Booking() {
  				</div>
  			</div>
  		</section>
-	</div>
 	<TourDescriptions/>
 	<BookingInfo />
-	</main>
-	</Container>
+	</div>
 	);
 	};
 
