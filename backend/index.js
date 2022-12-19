@@ -41,11 +41,11 @@ const addTourName = async (tour_name) => {
 }
 
 fetchAllUsers()
-addTourName('asdfad')
+// addTourName('asdfad')
 fetchAllTours()
 
 
-app.post('/tours', async (req, res) => {
+app.post('/api/tours', async (req, res) => {
   try {
     const data = req.body;
     const db = pgp('connection string');
@@ -58,7 +58,7 @@ app.post('/tours', async (req, res) => {
   }
 });
 
-
+/*
 
 // Express Settings
 app.use(cors());

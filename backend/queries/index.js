@@ -15,9 +15,8 @@ exports.queryToFetchAllTours = () => {
 }
 // INSERT
 exports.queryToInsertTourName = ( tour_name ) => {
-    var tour_name='funstring'
-    return db.none(
-        `INSERT INTO tours (tour_id, tour_name, user_id, guest_id, tour_date, tour_time) VALUES (6, 'tour_name', 2, 2, '1991-01-01T06:00:00.000Z', '1991-01-01T06:00:00.000Z') `
+        return db.none(
+        `INSERT INTO tours (tour_id(x+=1), tour_name, user_id, guest_id, tour_date, tour_time) VALUES (6, 'tour_name', 2, 2, '1991-01-01T06:00:00.000Z', '1991-01-01T06:00:00.000Z') `
     )
 }
 

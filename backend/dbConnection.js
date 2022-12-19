@@ -29,11 +29,11 @@ const cnObj = new ConnectionString(process.env.PG_URI);
 
 // DB Connection String
 const cn = {
-  host: 'containers-us-west-139.railway.app',
-  port: 7121,
+  host: 'containers-us-west-140.railway.app',
+  port: 5538,
   database: 'railway',
   user: 'postgres',
-  password: 'FljUYpULIr7bea1gSD2w',
+  password: 'bqzBZ6jwajjnmQYxJlmu',
   // TODO: This is likely very unsecure and should be fixed
   // ssl: {
   //   rejectUnauthorized: false,
