@@ -1,15 +1,18 @@
 const express = require('express');
 const axios = require('axios');
 const pgp = require('pg-promise')
-
+const { db } = require("./dbConnection");
 const app = express()
 
+
+
 app.use(express.json());
+
+
 // const
 const { queryToFetchAllUsers } =  require("./queries/index.js")
 const { queryToFetchAllTours } = require("./queries/index.js")
-const { queryToInsertBayTour } = require("./queries/index.js")
-
+const { queryToInsertTourName } = require("./queries/index.js")
 
 const fetchAllUsers = async  () => {
   try {
@@ -27,33 +30,33 @@ const fetchAllTours = async  () => {
 console.error(error)
 }}
 
-const addBayTour = async () => {
+const addTourName = async (tour_name) => {
   try {
-    const data = await queryToInsertBayTour()
-    console.log('Bay Tour added', data)
+    const products = await queryToInsertTourName('asdflksf')
+    console.log(tour_name)
+    console.log('Tour name added', products)
   } catch (error) {
     console.error(error)
   }
 }
 
 fetchAllUsers()
+addTourName('asdfad')
 fetchAllTours()
-addBayTour()
 
 
-app.post('/resources', async (req, res) => {
+app.post('/tours', async (req, res) => {
   try {
     const data = req.body;
     const db = pgp('connection string');
-    const query = 'INSERT INTO resources (name, description) VALUES ($1, $2)';
-    const result = await db.none(query, [data.name, data.description]);
+    const query = 'INSERT INTO tours (tour_name, time_of_day, tour_date) VALUES ($1, $2, $3)';
+    const result = await db.none(query, [data.tourName, data.timeOfDay, data.tourDate]);
     res.send({ success: true });
   } catch (error) {
     console.error(error);
     res.status(500).send({ success: false });
   }
 });
-
 
 
 
