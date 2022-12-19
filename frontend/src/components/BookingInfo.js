@@ -57,7 +57,7 @@ class BookingInfo extends React.Component {
 
 	render() {
 	return(
-	<main>
+		<div className="container my-5">
     	<form id="booknow" action="/bookingconfirmation">
 		<h1>Book your MoonDancer Tour</h1>
 		<select required onChange={this.handleTourNameChange} value={this.state.tourName}>
@@ -136,7 +136,7 @@ class BookingInfo extends React.Component {
 			<h3 id="price">Your Total: ${this.state.price}</h3>
 			<input id="booktripbutton" type="submit" value="BOOK TRIP"/>
         </form>
-	</main>
+	</div>
 	)};
 }
 
