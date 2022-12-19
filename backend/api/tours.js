@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+
+
+
 const { queryToFetchAllTours } = require("../queries/index.js")
 const fetchAllTours = async  () => {
     try {

@@ -44,6 +44,8 @@ function App() {
       .then((data) => setClientSecret(data.clientSecret));
   }, []);
 
+  
+
   const appearance = {
     theme: 'stripe',
   };
