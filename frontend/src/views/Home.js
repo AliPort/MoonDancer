@@ -7,7 +7,7 @@ const Home = () => {
     <header className="masthead">
       <div className="container h-100">
         <img className="img-fluid" src={FullLogo} alt="Moondancer Logo"/>
-        <button className="btn btn-primary" type="button" href="/booking">BOOK YOUR TOUR TODAY!</button>
+        <button className="btn btn-primary" type="button"><a href="/booking">BOOK YOUR TOUR TODAY!</a></button>
       </div>
     </header>
   )

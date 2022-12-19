@@ -32,8 +32,9 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
-    "reactstrap": "^9.1.5",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "reactstrap": "^9.1.5"
   },
   "scripts": {
     "start": "react-scripts start",

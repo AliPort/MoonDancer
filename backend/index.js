@@ -61,10 +61,20 @@ app.post('/tours', async (req, res) => {
 
 
 // Express Settings
-// app.use(cors());
-// app.use(express.static("public"));
-// app.use(express.urlencoded({ extended: true }));
-/* app.use(bodyParser.json());
+app.use(cors());
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+//create a user
+
+app.post("/todos", async (req, res) => {
+  try {
+    const { description } = req.body;
+    const newTodo = await pool.query(
+      "INSERT INTO todo (description) VALUES($1) RETURNING *",
+      [description]
+    );
 
     res.json(newTodo.rows[0]);
   } catch (err) {
@@ -109,23 +119,14 @@ app.put("/todos/:id", async (req, res) => {
       [description, id]
     );
 
-app.use(express.urlencoded({ extended: true }));
-// app.use({ queryToFetchAllProducts }, require('./controllers/tours'))
-// app.use({ queryToFetchAllProducts }, require('./controllers/users'))
-
-app.delete("/todos/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const deleteTodo = await pool.query("DELETE FROM todo WHERE todo_id = $1", [
-      id
-    ]);
-    res.json("Todo was deleted!");
+    res.json("Todo was updated!");
   } catch (err) {
-    console.log(err.message);
+    console.error(err.message);
   }
 });
 */
 
-app.listen(5000, () => {
-  console.log("server has started on port 5000");
+// Listen for Connections
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on ${process.env.PORT}`);
 });

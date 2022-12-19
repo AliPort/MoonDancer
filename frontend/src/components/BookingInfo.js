@@ -85,13 +85,13 @@ class BookingInfo extends React.Component {
 	render() {
 	return(
 	<main>
-		<h2>Your MoonDancer Trip</h2>
-    	<form action="/bookingconfirmation" onSubmit={this.handleSubmit}>
+    	<form id="booknow" action="/bookingconfirmation" onSubmit={this.handleSubmit}>
+		<h1>Book your MoonDancer Tour</h1>
 		<select required onChange={this.handleTourNameChange} value={this.state.tourName}>
 				<option className="tourName" value= " " selected disabled>Select a Tour</option>
-      			<option className="tourName" value="bay">Bay Fishing</option>
-      			<option className="tourName" value="river">River Fishing</option>
-      			<option className="tourName" value="ocean">Open Ocean Fishing</option> 
+      			<option className="tourName" id="bayauto" value="bay">Bay Fishing</option>
+      			<option className="tourName" id="riverauto" value="river">River Fishing</option>
+      			<option className="tourName" id="oceanauto" value="ocean">Open Ocean Fishing</option> 
   	   		</select>
 			<div className="booking_div" required onChange={this.handleTourDateChange}>
 				<LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -113,7 +113,7 @@ class BookingInfo extends React.Component {
   	   		</select>
 	    	<br/>
         	<div className="guests">
-		    	<h3>Party Size<br/></h3>
+		    	<h3 id="party">Party Size<br/></h3>
 		    	<select value={this.state.selectedOption || ""} onChange={this.handleOptionChange} required>
   			    	<option value="1">Just me!</option>
   			    	<option value="2">2</option>
@@ -126,7 +126,7 @@ class BookingInfo extends React.Component {
 							<div>
 								<input type="text" placeholder="Your Guest's First Name"/>
 								<input type="text" placeholder="Your Guest's Last Name"/>
-								<input type="email" placeholder="Your Guest's E-mail Address"/>
+								<input type="text" placeholder="Your Guest's E-mail"/>
 							</div>
 						)}
 					{this.state.selectedOption === "3" && (
@@ -134,34 +134,34 @@ class BookingInfo extends React.Component {
 							<label>GUEST 1</label><br/>
 							<input type="text" placeholder="Your Guest's First Name"/>
 							<input type="text" placeholder="Your Guest's Last Name"/>
-							<input type="email" placeholder="Your Guest's E-mail Address"/><br/>
+							<input type="text" placeholder="Your Guest's E-mail"/><br/>
 							<label>GUEST 2</label><br/>
 							<input type="text" placeholder="Your Guest's First Name"/>
 							<input type="text" placeholder="Your Guest's Last Name"/>
-							<input type="email" placeholder="Your Guest's E-mail Address"/>
+							<input type="text" placeholder="Your Guest's E-mail"/>
 						</div>
 					)}
 					{this.state.selectedOption === "4" && (
 						<div>
 							<label>GUEST 1</label><br/>
-							<input type="text" placeholder="Your Guest's First Name"/>
-							<input type="text" placeholder="Your Guest's Last Name"/>
-							<input type="email" placeholder="Your Guest's E-mail Address"/><br/>
+							<input required type="text" placeholder="Your Guest's First Name"/>
+							<input required type="text" placeholder="Your Guest's Last Name"/>
+							<input required type="text" placeholder="Your Guest's E-mail"/><br/>
 							<label>GUEST 2</label><br/>
-							<input type="text" placeholder="Your Guest's First Name"/>
-							<input type="text" placeholder="Your Guest's Last Name"/>
-							<input type="email" placeholder="Your Guest's E-mail Address"/><br/>
+							<input required type="text" placeholder="Your Guest's First Name"/>
+							<input required type="text" placeholder="Your Guest's Last Name"/>
+							<input required type="text" placeholder="Your Guest's E-mail"/><br/>
 							<label>GUEST 3</label><br/>
-							<input type="text" placeholder="Your Guest's First Name"/>
-							<input type="text" placeholder="Your Guest's Last Name"/>
-							<input type="email" placeholder="Your Guest's E-mail Address"/>
+							<input required type="text" placeholder="Your Guest's First Name"/>
+							<input required type="text" placeholder="Your Guest's Last Name"/>
+							<input required type="text" placeholder="Your Guest's E-mail"/>
 						</div>
 					)}
 				</div>
 				)}
 			</div>
 			<h3 id="price">Your Total: ${this.state.price}</h3>
-			<input type="submit" value="BOOK TRIP"/>
+			<input id="booktripbutton" type="submit" value="BOOK TRIP"/>
         </form>
 	</main>
 	)};

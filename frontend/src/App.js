@@ -4,8 +4,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
- import CheckoutForm from "./components/stripe/CheckoutForm"
-// import Loading from "./components/Loading";
+import CheckoutForm from "./components/stripe/CheckoutForm"
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
@@ -15,7 +14,6 @@ import Booking from './views/Booking'
 import Error404 from './views/Error404'
 import About from './views/About'
 import BookingConfirmation from "./views/BookingConfirmation";
-
 // styles
 import "./App.css";
 
