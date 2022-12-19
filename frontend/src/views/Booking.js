@@ -8,6 +8,7 @@ function Booking() {
 	<Container>
 	<main>
 	<div className="container my-5">
+		<button className="toursbtn btn-primary" type="button"><a href="#booknow">BOOK YOUR TOUR TODAY!</a></button>
  		<section>
  			<div className="card mb-2">
  				<div className="row">
