@@ -58,13 +58,13 @@ class BookingInfo extends React.Component {
 	render() {
 	return(
 	<main>
-		<h2>Your MoonDancer Trip</h2>
-    	<form action="/bookingconfirmation">
+    	<form id="booknow" action="/bookingconfirmation">
+		<h1>Book your MoonDancer Tour</h1>
 		<select required onChange={this.handleTourNameChange} value={this.state.tourName}>
 				<option className="tourName" value= " " selected disabled>Select a Tour</option>
-      			<option className="tourName" value="bay">Bay Fishing</option>
-      			<option className="tourName" value="river">River Fishing</option>
-      			<option className="tourName" value="ocean">Open Ocean Fishing</option> 
+      			<option className="tourName" id="bayauto" value="bay">Bay Fishing</option>
+      			<option className="tourName" id="riverauto" value="river">River Fishing</option>
+      			<option className="tourName" id="oceanauto" value="ocean">Open Ocean Fishing</option> 
   	   		</select>
 			<div className="booking_div">
 				<LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -86,7 +86,7 @@ class BookingInfo extends React.Component {
   	   		</select>
 	    	<br/>
         	<div className="guests">
-		    	<h3>Party Size<br/></h3>
+		    	<h3 id="party">Party Size<br/></h3>
 		    	<select value={this.state.selectedOption || ""} onChange={this.handleOptionChange} required>
   			    	<option value="1">Just me!</option>
   			    	<option value="2">2</option>

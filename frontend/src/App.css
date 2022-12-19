@@ -88,55 +88,106 @@ h3 {
   color: #4582A1 ;
   font-size: 1.5em;
 }
-.selection {
-  margin: 10px;
-}
-.collapsible {
-  background-color: white;
-  border-radius: 30px;
-  padding: 30px;
-  width: 100%;
-  border: none;
-  text-align: center;
-}
-
-.active, .collapsible:hover {
-  background-color: rgb(104, 104, 201);
-}
-
-.collapsible:after {
-  content: '\002B';
-  color: black;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  color: black;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: rgb(207, 207, 252);
-}
-
-.selection, .tourbtn {
-  width: 33.33%;
-  display: inline-block;
-}
-
 .topTour {
   color: white;
   font-weight: bold;
   height: 200px;
   margin-bottom: 50px;
 }
-
+.tourpicbox {
+  width: 200px; /* width of container */
+  height: 131.25px; /* height of container */
+  overflow: hidden;
+}
+.tourpicbox img {
+  margin: -80px 0px 0px 0px;
+}
+.tourpic {
+  margin-right: 20px;
+}
+.aboutbtn{
+  font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
+  font-size: 1.5em;
+  width: 80%;
+  background-color: rgb(249,232,164);
+  color: rgb(10,26,76);
+  padding: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+.aboutbtn:hover {
+  background-color: #4582A1;
+  color: rgb(249,232,164);
+  z-index: 1;
+}
+#cap {
+  margin-left: 50px;
+}
+a {
+  text-decoration: none;
+  color: rgb(10,26,76);
+}
+.toursbtn{
+  font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
+  font-size: 2em;
+  width: 100%;
+  margin-bottom: 1em;
+  background-color: rgb(249,232,164);
+  color: rgb(10,26,76);
+  padding: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+.toursbtn:hover {
+  background-color: #4582A1;
+  color: rgb(249,232,164);
+}
+.baybtn, .riverbtn, .oceanbtn{
+  font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
+  font-size: 1em;
+  width: 100%;
+  margin-bottom: 1em;
+  background-color: rgb(249,232,164);
+  color: rgb(10,26,76);
+  padding: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+.baybtn:hover, .riverbtn:hover, .oceanbtn:hover  {
+  background-color: #4582A1;
+  color: rgb(249,232,164);
+}
+body, html {   
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display:table;
+}
+body {
+  display:table-cell;
+  vertical-align:middle;
+}
+#booknow {
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  display:table;/* shrinks to fit content */
+  width: 60%;
+  background-color: rgb(249,232,164);
+  text-align: center;
+}
+select {
+  border-style: none;
+  width: 48%;
+  height: 3em;
+  margin: 1em;
+  border-radius: 5px;
+}
 /* .duckRow {
   display: flex;
   align-items: center;
@@ -331,6 +382,9 @@ button:disabled {
   #cap {
     width: 300px;
   }
+  .aboutbtn {
+    width: 300px;
+  }
 }
 @media only screen and (max-width: 1199px) {
   .masthead {
@@ -416,6 +470,9 @@ button:disabled {
   .card {
     width: 400px;
     margin-left: 80px;
+  }
+  #cap {
+    width: 300px;
   }
 }
 @media only screen and (max-width: 375px) {
