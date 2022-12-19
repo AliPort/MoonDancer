@@ -188,6 +188,35 @@ select {
   margin: 1em;
   border-radius: 5px;
 }
+#party {
+  margin-bottom: -10px;
+}
+#booktripbutton {
+  background-color: #4582A1;
+  color:  rgb(249,232,164);
+}
+#booktripbutton:hover {
+  background-color: rgb(10,26,76);
+  color:  rgb(249,232,164);
+}
+#thankyou {
+  background-color:   rgb(10,26,76);
+  text-align: center;
+}
+.thanks {
+  color: rgb(249,232,164);
+  font-weight: bold;
+  margin-top: 30px;
+}
+.carousel-control-next, .carousel-control-prev {
+  color: black;
+}
+.carousel-indicators, .carousel-control-prev, .carousel-control-next {
+  margin: 0x;
+}
+.card {
+  margin: 50px;
+}
 /* .duckRow {
   display: flex;
   align-items: center;

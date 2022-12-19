@@ -12,7 +12,7 @@ const TourDescriptions = () => {
         <div>
             <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header>
+                    <Accordion.Header >
                         <div className="tourpicbox">
                         <img className="tourpic" src={Eggs} width="175px" alt='pan of eggs being cooked out on the open open'/>
                         </div>

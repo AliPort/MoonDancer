@@ -1,10 +1,111 @@
 import React, { Fragment } from "react";
+import RockSeaBass from "../assets/Rock Sea Bass.jpg"
 
 const Fish = () => {
  
   return (
     <Fragment>
-        <h1>FISH INDEX</h1>
+<div className="bd-example">
+  <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+    <ol className="carousel-indicators">
+      <li className="slide" data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
+      <li className="slide" data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li className="slide" data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div className="carousel-inner">
+      <div className="carousel-item active">
+      <div className="card" width="18rem">
+        <img src={RockSeaBass} className="card-img-top" alt="..."/>
+        <div className="card-body">
+          <h5 className="card-title">Rock Sea Bass</h5>
+          <p className="card-text">Appearance</p>
+          <ul>
+            <li>Olive-bronze on back, fading to a lighter</li>
+            <li>Black blotches form vertical bars on sides</li>
+            <li>Dark black spot near middle of dorsal fin base</li>
+            <li>Tip of lower jaw is purple</li>
+            <li>Head and fins with bright blue and orange markings</li>
+            <li>Adults have tail with three lobes and elongated dorsal filaments</li>
+            <li>Top of head -  nape - is fully-scaled</li>
+          </ul>
+        </div>
+        <ul className="list-group list-group-flush">
+          <li className="list-group-item">Cras justo odio</li>
+          <li className="list-group-item">Dapibus ac facilisis in</li>
+          <li className="list-group-item">Vestibulum at eros</li>
+        </ul>
+        <div className="card-body">
+          <a href="#" className="card-link">Card link</a>
+          <a href="#" className="card-link">Another link</a>
+      </div>
+      </div>
+      <div class="carousel-item">
+      <div className="card" width="18rem">
+        <img src={RockSeaBass} className="card-img-top" alt="..."/>
+        <div className="card-body">
+          <h5 className="card-title">Rock Sea Bass</h5>
+          <p className="card-text">Appearance</p>
+          <ul>
+            <li>Olive-bronze on back, fading to a lighter</li>
+            <li>Black blotches form vertical bars on sides</li>
+            <li>Dark black spot near middle of dorsal fin base</li>
+            <li>Tip of lower jaw is purple</li>
+            <li>Head and fins with bright blue and orange markings</li>
+            <li>Adults have tail with three lobes and elongated dorsal filaments</li>
+            <li>Top of head -  nape - is fully-scaled</li>
+          </ul>
+        </div>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">Cras justo odio</li>
+            <li className="list-group-item">Dapibus ac facilisis in</li>
+            <li className="list-group-item">Vestibulum at eros</li>
+          </ul>
+          <div className="card-body">
+            <a href="#" className="card-link">Card link</a>
+            <a href="#" className="card-link">Another link</a>
+          </div>
+      </div>
+      </div>
+      <div class="carousel-item">
+      <div className="card" width="18rem">
+        <img src={RockSeaBass} className="card-img-top" alt="..."/>
+        <div className="card-body">
+          <h5 className="card-title">Rock Sea Bass</h5>
+          <p className="card-text">Appearance</p>
+          <ul>
+            <li>Olive-bronze on back, fading to a lighter</li>
+            <li>Black blotches form vertical bars on sides</li>
+            <li>Dark black spot near middle of dorsal fin base</li>
+            <li>Tip of lower jaw is purple</li>
+            <li>Head and fins with bright blue and orange markings</li>
+            <li>Adults have tail with three lobes and elongated dorsal filaments</li>
+            <li>Top of head -  nape - is fully-scaled</li>
+          </ul>
+        </div>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">Cras justo odio</li>
+            <li className="list-group-item">Dapibus ac facilisis in</li>
+            <li className="list-group-item">Vestibulum at eros</li>
+          </ul>
+          <div className="card-body">
+            <a href="#" className="card-link">Card link</a>
+            <a href="#" className="card-link">Another link</a>
+          </div>
+      </div>
+      </div>
+      <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="sr-only">Previous</span>
+      </a>
+      <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="sr-only">Next</span>
+      </a>
+  </div>
+</div>
+</div>
+</div>
+        {/* <h1>FISH INDEX</h1>
         <div className="container">
         <div className="row">
         <div className="col">
@@ -160,7 +261,7 @@ const Fish = () => {
         <p>Feed on fishes and invertebrates.</p>
     </div>
   </div>
- </div>
+ </div> */}
        
     </Fragment>
 
