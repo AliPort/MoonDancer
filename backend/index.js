@@ -26,7 +26,7 @@ app.use(bodyParser.json());
  app.post("/tours", async (req, res) => {
    try {
      const { description } = req.body;
-     const newTodo = await pool.query(
+     const newTodo = await db.query(
        "INSERT INTO tours (tour_id, tour_name, user_id, guest_id, tour_date, tour_time) VALUES($1, $2, $3, $4, $5, $6) RETURNING *",
        [description]
      );
