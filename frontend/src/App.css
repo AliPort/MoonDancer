@@ -1,4 +1,9 @@
 /* our styling */
+.oops {
+  background-color: white;
+  text-align: center;
+  padding: 5em;
+}
 @font-face {
   font-family: arkhip;
   src: url(./assets/arkhip_font.woff);
