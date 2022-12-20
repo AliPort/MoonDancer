@@ -20,7 +20,7 @@
 }
 #AskForm {
   box-shadow: none;
-} */
+} 
 * {
   box-sizing: border-box;
 }
@@ -87,12 +87,6 @@ h3 {
   font-family: 'arkhip', 'Copperplate', 'Papyrus', 'fantasy', sans-serif;
   color: #4582A1 ;
   font-size: 1.5em;
-}
-.topTour {
-  color: white;
-  font-weight: bold;
-  height: 200px;
-  margin-bottom: 50px;
 }
 .tourpicbox {
   width: 200px; /* width of container */
@@ -171,6 +165,13 @@ body, html {
 body {
   display:table-cell;
   vertical-align:middle;
+  background-image: url("./assets/beached_2.jpg");
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 #booknow {
   margin: auto;
@@ -188,57 +189,113 @@ select {
   margin: 1em;
   border-radius: 5px;
 }
-/* .duckRow {
-  display: flex;
-  align-items: center;
-  height: 200px;
-  background-image:"../Keep your Ducks in a row.jpg";
-} */
-
-.bookie {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#party {
+  margin-bottom: -10px;
 }
+#booktripbutton {
+  background-color: #4582A1;
+  color:  rgb(249,232,164);
+}
+#booktripbutton:hover {
+  background-color: rgb(10,26,76);
+  color:  rgb(249,232,164);
+}
+#thankyou {
+  background-color: rgb(10,26,76);
+  text-align: center;
+}
+.thanks {
+  color: rgb(249,232,164);
+  font-weight: bold;
+  margin-top: 30px;
+}
+form {
+  padding: 40px;
+}
+.column {
+  width: 30%;
+  margin-left: 30px;
+  padding: 20px;
+}
+.row {
+  width: 100%;
+}
+.row:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.fishname {
+  margin-top: .5em;
+  font-size: 2em;
+}
+.fishheadings {
+  margin-top: .5em;
+  font-size: 1.5em;
+}
+ul {
+  text-align: left;
+}
+.fishpic {
+  margin-top: 1em;
+}
+.hover {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background-color: rgb(249,232,164);
+  border: solid rgb(10,26,76);
+  color: rgb(10,26,76);
+  padding: 1em;
+  font-size: 1em;
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 770px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #F3F3F3;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
 
 /* API STYLING BELOW */
-/* auth0 */
-.next-steps .fa-link {
-  margin-right: 5px;
-}
-
-/* Fix for use only flexbox in content area */
-.next-steps .row {
-  margin-bottom: 0;
-}
-
-.next-steps .col-md-5 {
-  margin-bottom: 3rem;
-}
-
-@media (max-width: 768px) {
-  .next-steps .col-md-5 {
-    margin-bottom: 0;
-  }
-}
-
-.spinner {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.result-block-container .result-block {
-  opacity: 1;
-}
-
 /* stripe */
 #root {
   display: flex;
@@ -249,30 +306,6 @@ select {
   width: 200px;
   background-size: 200px 200px;
 }
-
-
-body {
-  background-image: url("./assets/beached_2.jpg");
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-form {
-  width: 30vw;
-  min-width: 500px;
-  align-self: center;
-  box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
-    0px 2px 5px 0px rgba(50, 50, 93, 0.1), 0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
-  border-radius: 7px;
-  padding: 40px;
-}
-
 
 #payment-message {
   color: rgb(105, 115, 134);
@@ -404,6 +437,12 @@ button:disabled {
   h3 {
     font-size: 1.2em;
   }
+  .column {
+    margin-left: 20em;;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .img-fluid {
@@ -422,12 +461,19 @@ button:disabled {
   h3 {
     font-size: 1em;
   }
-  #icon {
-    margin-left: 255px;
+  .column {
+    margin-left: 15em;;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  .nav-item {
-    text-align: center;
-    margin-left: -30px;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    margin-left: 9em;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (max-width: 575px){
@@ -436,58 +482,68 @@ button:disabled {
     width: 90%;
     margin-left: 30px;
   }
-  #icon {
-    margin-left: 248px;
-  }
-  .nav-item {
-    text-align: center;
-    margin-left: -35px;
-  }
-  #cap {
-    width: 400px;
-  }
   .card {
     width: 400px;
     margin-left: 60px;
+  }
+  .column {
+    margin-left: 8em;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (max-width: 412px) {
-  #icon {
-    margin-left: 225px;
+  .card {
+    width: 20em;
+    margin-left: 1.8em;
   }
-  .btn {
+  #cap, .aboutbtn {
+    margin-left: 2em;
     width: 80%;
     font-size: 1.2em;
-    margin-left: 50px;
   }
-  .img-fluid {
-    width: 80%;
-    margin-left: 50px;
+  .column {
+    margin-left: 3em;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  .masthead {
-    min-height: 350px;
+  #ask {
+    margin-left: 1em;
   }
-  .card {
-    width: 400px;
-    margin-left: 80px;
-  }
-  #cap {
-    width: 300px;
+  .btn {
+    margin-left: 1em;
+    margin-top: -1.8em;
   }
 }
 @media only screen and (max-width: 375px) {
-  .btn {
-    width: 70%;
-    font-size: 1.2em;
-    margin-left: 85px;
-  }
-  .img-fluid {
-    margin-left: 60px;
-  }
-  input[type=text] {
-    width: 70%;
-  }
   #bottomfoot {
     font-size: .5em;
+  }
+  .column {
+    margin-left: 1.8em;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  #ask {
+    margin-left: 1.5em;
+  }
+  .btn {
+    margin-top: -1em;
+    margin-left: .5em;
+  }
+  .masthead {
+    min-height: 25em;
+  }
+  .card {
+    margin-left: 1em;
+  }
+  .toursbtn {
+    width: 14em;
+    font-size: 1.5em;
+    margin-left: .3em;
+    margin-top: -.5em;
   }
 }
