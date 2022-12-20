@@ -8,7 +8,7 @@ function About() {
 				<div className="card mb-3">
       				<div className="row">
 						<div className="col-md-6">
-          					<img id="cap" width="500px;" src={Captain} alt="Photo of Captain Will Smith in a wet suit"/>
+          					<img id="cap" width="500px;" src={Captain} alt="Captain Will Smith in a wet suit"/>
 							<button className="aboutbtn btn-primary" type="button"><a href="/booking">SET SAIL WITH CAPTAIN SMITH!</a></button>
 						</div>
 						<div className="col-md-6 p-5 align-self-center">
