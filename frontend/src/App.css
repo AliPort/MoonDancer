@@ -4,6 +4,11 @@
   text-align: center;
   padding: 5em;
 }
+.oops {
+  background-color: white;
+  padding: 5em;
+  text-align: center;
+}
 @font-face {
   font-family: arkhip;
   src: url(./assets/arkhip_font.woff);
