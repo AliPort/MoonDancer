@@ -3,12 +3,11 @@ import Interior from "../assets/spacious comfortable seating with sink on deck.j
 import View from "../assets/spectacular views.jpeg"
 
 import Accordion from 'react-bootstrap/Accordion';
-import Container from 'react-bootstrap/Container';
 
 
 const TourDescriptions = () => {
     return (
-    <Container>
+        <div className="container my-5">
         <div>
             <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
@@ -75,7 +74,7 @@ const TourDescriptions = () => {
                 </Accordion.Item>
             </Accordion>
         </div>
-    </Container>
+    </div>
     )
 }
 
