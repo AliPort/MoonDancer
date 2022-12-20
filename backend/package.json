@@ -28,6 +28,10 @@
         "pg": "^8.6.0",
         "pg-hstore": "^2.3.4",
         "pg-promise": "^10.15.4",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "sequelize": "^6.27.0",
+        "sequelize-cli": "^6.5.2",
         "spex": "^3.2.0",
         "split2": "^4.1.0",
         "xtend": "^4.0.2"

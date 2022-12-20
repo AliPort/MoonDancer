@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Route, Router, Switch } from 'react-router-dom'
+import {  Route, Router, Switch } from 'react-router-dom'
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
-// import CheckoutForm from "./components/stripe/CheckoutForm"
+import CheckoutForm from "./components/stripe/CheckoutForm"
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
@@ -22,30 +22,56 @@ import "./App.css";
 import initFontAwesome from "./utils/initFontAwesome";
 initFontAwesome();
 
-const App = ({  }) => {
-  const [data, setData] = useState({ });
+// Make sure to call loadStripe outside of a component’s render to avoid
+// recreating the Stripe object on every render.
+// This is a public sample test API key.
+// Don’t submit any personally identifiable information in requests made with this key.
+// Sign in to see your own test API key embedded in code samples.
+const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+
+function App() {
+  const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    // Fetch some data here and update the state using setData
+    // Create PaymentIntent as soon as the page loads
+    fetch("/create-payment-intent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: [{ id: "xl-tshirt" }] }),
+    })
+      .then((res) => res.json())
+      .then((data) => setClientSecret(data.clientSecret));
   }, []);
 
+  const appearance = {
+    theme: 'stripe',
+  };
+  const options = {
+    clientSecret,
+    appearance,
+  };
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-  <Router history={history}>
-    <div id="app" className="d-flex flex-column h-100">
-      <NavBar />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route exact path="/fish" component={Fish} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/booking" component={Booking} />
-        <Route path='/BookingConfirmation' component={BookingConfirmation} />
-        <Route path="/" component={Error404} />
-      </Switch>
-      <Footer />
+    <Router history={history}>
+      <div id="app" className="d-flex flex-column h-100">
+      <div className="App">
+      {clientSecret && (
+        <Elements options={options} stripe={stripePromise}>
+          <CheckoutForm />
+        </Elements>
+      )}
     </div>
-  </Router>
-</LocalizationProvider>
+        <NavBar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route exact path="/fish" component={Fish} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/booking" component={Booking} />
+            <Route path='/BookingConfirmation' component={BookingConfirmation} />
+            <Route path="/" component={Error404} />
+          </Switch>
+        <Footer />
+    </div>
+    </Router>
   );
 }
 

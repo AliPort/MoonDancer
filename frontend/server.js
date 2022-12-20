@@ -1,5 +1,3 @@
-/*
-import withEnv from 'react-env-config';
 const express = require("express");
 // const morgan = require("morgan");
 // const helmet = require("helmet");
@@ -11,17 +9,16 @@ const stripe = require("stripe")('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const app = express();
 
-const port = process.env.REACT_APP_SERVER_URL || 5000;
+const port = process.env.SERVER_PORT || 3000;
 
 /*
 app.use(morgan("dev"));
-
 app.use(
   helmet({
     contentSecurityPolicy: false,
   })
 );
-
+*/
 
 app.use(express.static(join(__dirname, "build")));
 app.use(express.static("public"));
@@ -52,4 +49,3 @@ app.post("/create-payment-intent", async (req, res) => {
 });
 
 app.listen(port, () => console.log(`Server listening on port ${port}`));
-*/

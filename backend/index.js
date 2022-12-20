@@ -27,7 +27,7 @@ app.use(bodyParser.json());
    try {
      const { description } = req.body;
      const newTodo = await pool.query(
-       "INSERT INTO tours (description) VALUES($1) RETURNING *",
+       "INSERT INTO tours (tour_id, tour_name, user_id, guest_id, tour_date, tour_time) VALUES($1, $2, $3, $4, $5, $6) RETURNING *",
        [description]
      );
 
@@ -56,7 +56,7 @@ app.get("/users", async (req, res) => {
  app.get("/users", async (req, res) => {
    try {
      const { id } = req.params;
-     const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [
+     const todo = await db.query("SELECT * FROM todo WHERE todo_id = $1", [
        id
      ]);
 
