@@ -60,8 +60,47 @@ class BookingInfo extends React.Component {
     });
   };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleSubmit = async (event) => {
+	event.preventDefault();
+  
+	// Collect form data from component state
+	const formData = {
+	  tourName: this.state.tourName,
+	  tourDate: this.state.tourDate,
+	  timeOfDay: this.state.timeOfDay,
+	  // Add any additional form data as needed
+	};
+  
+	// Validate form data
+	if (formData.tourName === " " || formData.tourDate === null || formData.timeOfDay === " ") {
+	  // Display error message if required fields are missing
+	  this.setState({ error: "Please fill out all required fields." });
+	  return;
+	}
+  
+	try {
+	  // Set loading state
+	  this.setState({ isLoading: true });
+  
+	  // Send form data to server using HTTP request
+	  const response = await fetch("/bookingconfirmation", {
+		method: "POST",
+		headers: {
+		  "Content-Type": "application/json",
+		},
+		body: JSON.stringify(formData),
+	  });
+  
+	  if (response.ok) {
+		// If form submission is successful, redirect to confirmation page or display success message
+		this.setState({ isLoading: false, success: true });
+	  } else {
+		throw new Error("An error occurred. Please try again.");
+	  }
+	} catch (error) {
+	  // If there is an error, display error message and allow user to try again
+	  this.setState({ isLoading: false, error: error.message });
+	}
   };
 
   render() {
