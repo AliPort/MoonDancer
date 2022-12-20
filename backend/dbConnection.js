@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { ConnectionString } = require('connection-String');
+// const { ConnectionString } = require('connection-String');
 
 
 const initOptions = {
@@ -25,7 +25,7 @@ const initOptions = {
 const pgp = require('pg-promise')(initOptions);
 
 // // Parse the connection string into an object
-const cnObj = new ConnectionString(process.env.PG_URI);
+// const cnObj = new ConnectionString(process.env.PG_URI);
 
 // DB Connection String
 const cn = {

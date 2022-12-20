@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Router, Switch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 // import CheckoutForm from "./components/stripe/CheckoutForm"
 import NavBar from "./components/NavBar";
@@ -21,8 +22,8 @@ import "./App.css";
 import initFontAwesome from "./utils/initFontAwesome";
 initFontAwesome();
 
-const App = ({ children }) => {
-  const [data, setData] = useState({});
+const App = ({  }) => {
+  const [data, setData] = useState({ });
 
   useEffect(() => {
     // Fetch some data here and update the state using setData

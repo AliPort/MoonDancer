@@ -1,97 +1,51 @@
-const express = require('express');
-const cors = require('cors')
-// const axios = require('axios');
-// const pgp = require('pg-promise')
-const { db } = require("./dbConnection");
-const { queryToFetchAllTours } = require("./queries/index.js")
+// Modules and Globals
+require("dotenv").config();
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const path = require("path");
+const app = express();
+const { db } = require("./dbConnection.js");
+// const { queryToFetchAllProducts } =  require("./queries/index.js")
 
-const app = express()
+// const fetchAllProducts = async  () => {
+//     const products = await queryToFetchAllProducts()
+//     console.log('DEM PRODUCTS ====>', products)
+// }
 
+// fetchAllProducts()
 
-// MIDDLEWARE
-app.use(express.json());
-app.use(cors());
-// const
-// const { queryToFetchAllUsers } =  require("./queries/index.js")
-
-// const { queryToInsertTourData } = require("./queries/index.js")
-/*
-const fetchAllUsers = async  () => {
-  try {
-    const products = await queryToFetchAllUsers()
-    console.log('DEM USERS ====>', products)
-  } catch (error) {
-console.error(error)
-}}
-*/
-
-const fetchAllTours = async  () => {
-  try {
-    const products = await queryToFetchAllTours()
-    console.log('DEM TOURS ====>', products)
-  } catch (error) {
-console.error(error)
-}}
-
-/*
-const insertTourData = async (tourData) => {
-  try {
-    const tourData = await queryToInsertTourData()
-    console.log()
-    console.log('TourData added', tourData)
-  } catch (error) {
-    console.error(error)
-  }
-}
-*/
-
-// fetchAllUsers()
-// insertTourData()
-fetchAllTours()
-
-
-app.post('/api/tours', async (req, res) => {
-  try {
-    const data = req.body;
-    const query = 'INSERT INTO tours (tour_name, time_of_day, tour_date) VALUES ($1, $2, $3)';
-    const result = await db.none(query, [data.tourName, data.timeOfDay, data.tourDate]);
-    res.send({ success: true });
-  } catch (error) {
-    console.error(error);
-    res.status(500).send({ success: false });
-  }
-});
-
-
-/*
 // Express Settings
-
+app.use(cors());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //create a user
 
-app.post("/todos", async (req, res) => {
-  try {
-    const { description } = req.body;
-    const newTodo = await pool.query(
-      "INSERT INTO todo (description) VALUES($1) RETURNING *",
-      [description]
-    );
+ app.post("/tours", async (req, res) => {
+   try {
+     const { description } = req.body;
+     const newTodo = await pool.query(
+       "INSERT INTO tours (description) VALUES($1) RETURNING *",
+       [description]
+     );
 
-    res.json(newTodo.rows[0]);
-  } catch (err) {
-    console.error(err.message);
-  }
-});
+     res.json(newTodo.rows[0]);
+   } catch (err) {
+     console.error(err.message);
+   }
+ });
 
 //get all Users
 
-app.get("/todos", async (req, res) => {
+app.get("/users", async (req, res) => {
+  console.log("===== in users route =====");
   try {
-    const allUsers = await user.query("SELECT * FROM user");
-    res.json(allUsers.rows);
+    const allUsers = await db.query("SELECT * FROM users");
+    console.log(allUsers, " :: allUsers");
+    if (!allUsers) throw new Error("No users found");
+    res.json(allUsers);
   } catch (err) {
     console.error(err.message);
   }
@@ -99,39 +53,42 @@ app.get("/todos", async (req, res) => {
 
 //get a User
 
-app.get("/todos/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [
-      id
-    ]);  
+ app.get("/users", async (req, res) => {
+   try {
+     const { id } = req.params;
+     const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [
+       id
+     ]);
 
-    res.json(todo.rows[0]);
-  } catch (err) {
-    console.error(err.message);
-  }
-});
+     res.json(todo.rows[0]);
+   } catch (err) {
+     console.error(err.message);
+   }
+ });
 
 //update a tour
 
-app.put("/todos/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { description } = req.body;
-    const updateTodo = await pool.query(
-      "UPDATE todo SET description = $1 WHERE todo_id = $2",
-      [description, id]
-    );
+// app.put("/todos/:id", async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const { description } = req.body;
+//     const updateTodo = await pool.query(
+//       "UPDATE todo SET description = $1 WHERE todo_id = $2",
+//       [description, id]
+//     );
 
-    res.json("Todo was updated!");
-  } catch (err) {
-    console.error(err.message);
-  }
-});
-*/
+//     res.json("Todo was updated!");
+//   } catch (err) {
+//     console.error(err.message);
+//   }
+// });
+
+app.use(express.urlencoded({ extended: true }));
+
+// app.use('/api/tours', require('./controllers/tours'))
+// app.use('/api/users', require('./controllers/users'))
 
 // Listen for Connections
 app.listen(process.env.PORT, () => {
   console.log(`Listening on ${process.env.PORT}`);
-  console.log(`Listening on ${process.env.PGPORT}`);
 });
