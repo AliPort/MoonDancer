@@ -37,6 +37,9 @@ Javascript
 React
 Material UI (library of React UI components that implements Google's Material Design)
 Stripe (payment processing)
+Railway.app for cloud management
+TablePlus for db creation
+Vercel for deployment
 
 ## Outstanding functionality and/or issues 
 Most (if not all) images for the website are placeholders and will be replaced with professional photos vs the current iphone pics. 
