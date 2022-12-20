@@ -18,8 +18,8 @@ const Footer = () => (
           <div id="footermid" className="col-md-3 col-lg-2 col-xl-2 ml-auto mt-4">
             <h6 className="text-uppercase fw-bold">Contact</h6>
             <hr className="mb-4 mt-0 d-inline-block mx-auto"/>
-            <p><a className="text-dark">Email</a></p>
-            <p><a className="text-dark">Tel</a></p>
+            <p className="text-dark">Email</p>
+            <p className="text-dark">Tel</p>
             <h6 className="text-uppercase fw-bold">While You're Here</h6>
             <hr className="mb-4 mt-0 d-inline-block mx-auto"/>
             <p><a target="blank" href="https://www.visitflorida.com/" className="text-dark">Visit Florida</a></p>
